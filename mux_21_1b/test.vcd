@@ -1,0 +1,82 @@
+$date
+	Sun May 22 16:40:42 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module testbench $end
+$var wire 1 ! res $end
+$var reg 1 " a $end
+$var reg 1 # b $end
+$var reg 1 $ sel $end
+$scope module my_mux1 $end
+$var wire 1 " a $end
+$var wire 1 % a_out $end
+$var wire 1 # b $end
+$var wire 1 & b_out $end
+$var wire 1 ' not_sel $end
+$var wire 1 ! res $end
+$var wire 1 $ sel $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+x'
+x&
+x%
+0$
+0#
+0"
+x!
+$end
+#1
+1'
+#3
+0&
+0%
+#5
+1#
+#6
+0!
+#10
+0#
+1"
+#13
+1%
+#15
+1#
+#16
+1!
+#20
+1$
+0#
+0"
+#21
+0'
+#23
+0%
+#25
+1#
+#26
+0!
+#28
+1&
+#30
+0#
+1"
+#31
+1!
+#33
+0&
+#35
+1#
+#36
+0!
+#38
+1&
+#41
+1!

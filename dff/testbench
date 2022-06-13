@@ -1,0 +1,150 @@
+#! /usr/local/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1148-gef01dd1e)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 9;
+:vpi_module "/usr/local/lib/ivl/system.vpi";
+:vpi_module "/usr/local/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/local/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/local/lib/ivl/v2005_math.vpi";
+:vpi_module "/usr/local/lib/ivl/va_math.vpi";
+S_0x752b50 .scope module, "testbench" "testbench" 2 3;
+ .timescale -9 -9;
+v0x76e490_0 .var "clk", 0 0;
+v0x76e5a0_0 .var "d", 0 0;
+v0x76e6b0_0 .net "q", 0 0, L_0x76f4d0;  1 drivers
+v0x76e750_0 .net "qb", 0 0, L_0x76f6f0;  1 drivers
+S_0x752ce0 .scope module, "dff_0" "dff" 2 10, 3 2 0, S_0x752b50;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 1 "d";
+    .port_info 1 /INPUT 1 "clk";
+    .port_info 2 /OUTPUT 1 "q";
+    .port_info 3 /OUTPUT 1 "qb";
+L_0x76e7f0/d .functor NOT 1, v0x76e490_0, C4<0>, C4<0>, C4<0>;
+L_0x76e7f0 .delay 1 (1,1,1) L_0x76e7f0/d;
+v0x76de40_0 .net "clk", 0 0, v0x76e490_0;  1 drivers
+v0x76df00_0 .net "d", 0 0, v0x76e5a0_0;  1 drivers
+v0x76dfd0_0 .net "nclk", 0 0, L_0x76e7f0;  1 drivers
+v0x76e0d0_0 .net "q", 0 0, L_0x76f4d0;  alias, 1 drivers
+v0x76e1c0_0 .net "q_tmp", 0 0, L_0x76ed80;  1 drivers
+v0x76e2b0_0 .net "qb", 0 0, L_0x76f6f0;  alias, 1 drivers
+v0x76e3a0_0 .net "qb_tmp", 0 0, L_0x76ef10;  1 drivers
+S_0x757230 .scope module, "d_latch_0" "d_latch" 3 12, 4 2 0, S_0x752ce0;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 1 "d";
+    .port_info 1 /INPUT 1 "g";
+    .port_info 2 /OUTPUT 1 "q";
+    .port_info 3 /OUTPUT 1 "qb";
+L_0x76e950/d .functor NOT 1, v0x76e5a0_0, C4<0>, C4<0>, C4<0>;
+L_0x76e950 .delay 1 (1,1,1) L_0x76e950/d;
+L_0x76ea80/d .functor AND 1, L_0x76e950, L_0x76e7f0, C4<1>, C4<1>;
+L_0x76ea80 .delay 1 (3,3,3) L_0x76ea80/d;
+L_0x76ec50/d .functor AND 1, v0x76e5a0_0, L_0x76e7f0, C4<1>, C4<1>;
+L_0x76ec50 .delay 1 (3,3,3) L_0x76ec50/d;
+v0x76c9d0_0 .net "d", 0 0, v0x76e5a0_0;  alias, 1 drivers
+v0x76cab0_0 .net "g", 0 0, L_0x76e7f0;  alias, 1 drivers
+v0x76cb70_0 .net "nd", 0 0, L_0x76e950;  1 drivers
+v0x76cc10_0 .net "q", 0 0, L_0x76ed80;  alias, 1 drivers
+v0x76cce0_0 .net "qb", 0 0, L_0x76ef10;  alias, 1 drivers
+v0x76cdd0_0 .net "r", 0 0, L_0x76ea80;  1 drivers
+v0x76cea0_0 .net "s", 0 0, L_0x76ec50;  1 drivers
+S_0x757480 .scope module, "sr_latch_0" "sr_latch" 4 13, 5 2 0, S_0x757230;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 1 "r";
+    .port_info 1 /INPUT 1 "s";
+    .port_info 2 /OUTPUT 1 "q";
+    .port_info 3 /OUTPUT 1 "qb";
+L_0x76ed80/d .functor NOR 1, L_0x76ea80, L_0x76ef10, C4<0>, C4<0>;
+L_0x76ed80 .delay 1 (2,2,2) L_0x76ed80/d;
+L_0x76ef10/d .functor NOR 1, L_0x76ed80, L_0x76ec50, C4<0>, C4<0>;
+L_0x76ef10 .delay 1 (2,2,2) L_0x76ef10/d;
+v0x752f30_0 .net "q", 0 0, L_0x76ed80;  alias, 1 drivers
+v0x76c6d0_0 .net "qb", 0 0, L_0x76ef10;  alias, 1 drivers
+v0x76c790_0 .net "r", 0 0, L_0x76ea80;  alias, 1 drivers
+v0x76c860_0 .net "s", 0 0, L_0x76ec50;  alias, 1 drivers
+S_0x76cfa0 .scope module, "d_latch_1" "d_latch" 3 13, 4 2 0, S_0x752ce0;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 1 "d";
+    .port_info 1 /INPUT 1 "g";
+    .port_info 2 /OUTPUT 1 "q";
+    .port_info 3 /OUTPUT 1 "qb";
+L_0x76f080/d .functor NOT 1, L_0x76ed80, C4<0>, C4<0>, C4<0>;
+L_0x76f080 .delay 1 (1,1,1) L_0x76f080/d;
+L_0x76f140/d .functor AND 1, L_0x76f080, v0x76e490_0, C4<1>, C4<1>;
+L_0x76f140 .delay 1 (3,3,3) L_0x76f140/d;
+L_0x76f350/d .functor AND 1, L_0x76ed80, v0x76e490_0, C4<1>, C4<1>;
+L_0x76f350 .delay 1 (3,3,3) L_0x76f350/d;
+v0x76d870_0 .net "d", 0 0, L_0x76ed80;  alias, 1 drivers
+v0x76d980_0 .net "g", 0 0, v0x76e490_0;  alias, 1 drivers
+v0x76da40_0 .net "nd", 0 0, L_0x76f080;  1 drivers
+v0x76dae0_0 .net "q", 0 0, L_0x76f4d0;  alias, 1 drivers
+v0x76db80_0 .net "qb", 0 0, L_0x76f6f0;  alias, 1 drivers
+v0x76dc70_0 .net "r", 0 0, L_0x76f140;  1 drivers
+v0x76dd40_0 .net "s", 0 0, L_0x76f350;  1 drivers
+S_0x76d210 .scope module, "sr_latch_0" "sr_latch" 4 13, 5 2 0, S_0x76cfa0;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 1 "r";
+    .port_info 1 /INPUT 1 "s";
+    .port_info 2 /OUTPUT 1 "q";
+    .port_info 3 /OUTPUT 1 "qb";
+L_0x76f4d0/d .functor NOR 1, L_0x76f140, L_0x76f6f0, C4<0>, C4<0>;
+L_0x76f4d0 .delay 1 (2,2,2) L_0x76f4d0/d;
+L_0x76f6f0/d .functor NOR 1, L_0x76f4d0, L_0x76f350, C4<0>, C4<0>;
+L_0x76f6f0 .delay 1 (2,2,2) L_0x76f6f0/d;
+v0x76d490_0 .net "q", 0 0, L_0x76f4d0;  alias, 1 drivers
+v0x76d570_0 .net "qb", 0 0, L_0x76f6f0;  alias, 1 drivers
+v0x76d630_0 .net "r", 0 0, L_0x76f140;  alias, 1 drivers
+v0x76d700_0 .net "s", 0 0, L_0x76f350;  alias, 1 drivers
+    .scope S_0x752b50;
+T_0 ;
+    %vpi_call 2 13 "$dumpfile", "test.vcd" {0 0 0};
+    %vpi_call 2 14 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x752b50 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x76e490_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x76e5a0_0, 0, 1;
+    %delay 17, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x76e490_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x76e5a0_0, 0, 1;
+    %delay 17, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x76e490_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x76e5a0_0, 0, 1;
+    %delay 17, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x76e490_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x76e5a0_0, 0, 1;
+    %delay 17, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x76e490_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x76e5a0_0, 0, 1;
+    %delay 17, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x76e490_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x76e5a0_0, 0, 1;
+    %delay 17, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x76e490_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x76e5a0_0, 0, 1;
+    %delay 17, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x76e490_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x76e5a0_0, 0, 1;
+    %delay 17, 0;
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 6;
+    "N/A";
+    "<interactive>";
+    "testbench.v";
+    "dff.v";
+    "../d_latch/d_latch.v";
+    "../sr_latch/sr_latch.v";

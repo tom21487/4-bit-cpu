@@ -1,0 +1,78 @@
+$date
+	Sat Jun  4 22:14:31 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module testbench $end
+$var wire 1 ! qb $end
+$var wire 1 " q $end
+$var reg 1 # d $end
+$var reg 1 $ g $end
+$scope module d_latch_0 $end
+$var wire 1 # d $end
+$var wire 1 $ g $end
+$var wire 1 % nd $end
+$var wire 1 & r $end
+$var wire 1 ' s $end
+$var wire 1 ! qb $end
+$var wire 1 " q $end
+$scope module sr_latch_0 $end
+$var wire 1 " q $end
+$var wire 1 ! qb $end
+$var wire 1 & r $end
+$var wire 1 ' s $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+x'
+x&
+x%
+1$
+0#
+x"
+x!
+$end
+#1
+1%
+#3
+0'
+#4
+1&
+#6
+0"
+#8
+1!
+0$
+#11
+0&
+#16
+1#
+#17
+0%
+#24
+1$
+#27
+1'
+#29
+0!
+#31
+1"
+#32
+0$
+0#
+#33
+1%
+#35
+0'
+#40
+1#
+#41
+0%
+#48
