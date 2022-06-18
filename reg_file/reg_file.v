@@ -1,7 +1,9 @@
-module reg_file(SEL_A, SEL_B, SEL_W, DATA, clk, OUT_A, OUT_B);
+module reg_file(SEL_A, SEL_B, SEL_W, DATA_IN, clk, OUT_A, OUT_B);
    // IO
    input [1:0] SEL_A;
    input [1:0] SEL_B;
+   input [1:0] SEL_W;
+   input [3:0] DATA_IN;
    input clk;
    output [3:0] OUT_A;
    output [3:0] OUT_B;
@@ -16,22 +18,22 @@ module reg_file(SEL_A, SEL_B, SEL_W, DATA, clk, OUT_A, OUT_B);
    wire [3:0]   Q3;
    wire [3:0]   QB3;
    wire [3:0]   IN3;
-   mux_21_4b mux_21_4b_3(.A(DATA), .B(Q3), .sel(s3), .RES(IN3));
+   mux_21_4b mux_21_4b_3(.A(Q3), .B(DATA_IN), .sel(s3), .RES(IN3));
 
    wire [3:0]   Q2;
    wire [3:0]   QB2;
-   wire [3:0]   IN3;
-   mux_21_4b mux_21_4b_2(.A(DATA), .B(Q2), .sel(s2), .RES(IN2));
+   wire [3:0]   IN2;
+   mux_21_4b mux_21_4b_2(.A(Q2), .B(DATA_IN), .sel(s2), .RES(IN2));
 
    wire [3:0]   Q1;
    wire [3:0]   QB1;
    wire [3:0]   IN1;
-   mux_21_4b mux_21_4b_1(.A(DATA), .B(Q1), .sel(s1), .RES(IN1));
+   mux_21_4b mux_21_4b_1(.A(Q1), .B(DATA_IN), .sel(s1), .RES(IN1));
    
    wire [3:0]   Q0;
    wire [3:0]   QB0;
    wire [3:0]   IN0;
-   mux_21_4b mux_21_4b_0(.A(DATA), .B(Q0), .sel(s0), .RES(IN0));
+   mux_21_4b mux_21_4b_0(.A(Q0), .B(DATA_IN), .sel(s0), .RES(IN0));
    
    // Registers
    reg4 r3(.D(IN3), .clk(clk), .Q(Q3), .QB(QB3));

@@ -1,4 +1,6 @@
 #+title: 4-bit cpu tasks
 #+author: tom21487
 
-** TODO reg_file/write_testbench.v
+* Register file
+** DONE reg_file/write_testbench.v
+** TODO write_en
