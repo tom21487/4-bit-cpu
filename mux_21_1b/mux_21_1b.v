@@ -1,4 +1,6 @@
 // Critical path delay = 7ns
+// 0 -> copy a
+// 1 -> copy b
 module mux_21_1b(a, b, sel, res);
    input a;
    input b;

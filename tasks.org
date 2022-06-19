@@ -2,5 +2,6 @@
 #+author: tom21487
 
 * Register file
-** DONE reg_file/write_testbench.v
-** TODO write_en
+** TODO implement add instruction
+** DONE write_en tests
+** DONE *write_testbench.v* replace *read_testbench.v* and rename as *testbench.v*
