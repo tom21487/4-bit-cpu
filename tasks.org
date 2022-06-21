@@ -1,7 +1,8 @@
 #+title: 4-bit cpu tasks
 #+author: tom21487
 
-* Register file
+* Tasks
 ** TODO implement add instruction
-** DONE write_en tests
-** DONE *write_testbench.v* replace *read_testbench.v* and rename as *testbench.v*
+** TODO instruction memory
+** TODO program counter
+** TODO overflow bit

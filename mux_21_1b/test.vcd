@@ -1,5 +1,5 @@
 $date
-	Sun May 22 16:40:42 2022
+	Mon Jun 20 17:26:09 2022
 $end
 $version
 	Icarus Verilog
@@ -12,7 +12,7 @@ $var wire 1 ! res $end
 $var reg 1 " a $end
 $var reg 1 # b $end
 $var reg 1 $ sel $end
-$scope module my_mux1 $end
+$scope module my_mux_21_1b $end
 $var wire 1 " a $end
 $var wire 1 % a_out $end
 $var wire 1 # b $end
@@ -28,55 +28,16 @@ $dumpvars
 x'
 x&
 x%
-0$
+1$
 0#
-0"
+x"
 x!
 $end
 #1
-1'
+0'
 #3
 0&
+#4
 0%
-#5
-1#
-#6
+#7
 0!
-#10
-0#
-1"
-#13
-1%
-#15
-1#
-#16
-1!
-#20
-1$
-0#
-0"
-#21
-0'
-#23
-0%
-#25
-1#
-#26
-0!
-#28
-1&
-#30
-0#
-1"
-#31
-1!
-#33
-0&
-#35
-1#
-#36
-0!
-#38
-1&
-#41
-1!

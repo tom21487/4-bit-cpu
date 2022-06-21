@@ -9,9 +9,14 @@ module testbench;
    reg       clk;
    wire [3:0] OUT_A;
    wire [3:0] OUT_B;
-
+   wire [3:0] Q3;
+   wire [3:0] Q2;
+   wire [3:0] Q1;
+   wire [3:0] Q0;
+   
    reg_file reg_file_0(.SEL_A(SEL_A), .SEL_B(SEL_B), .write_en(write_en), .SEL_W(SEL_W),
-                       .DATA_IN(DATA_IN), .clk(clk), .OUT_A(OUT_A), .OUT_B(OUT_B));
+                       .DATA_IN(DATA_IN), .clk(clk), .OUT_A(OUT_A), .OUT_B(OUT_B),
+                       .Q3(Q3), .Q2(Q2), .Q1(Q1), .Q0(Q0));
 
    initial begin
       $dumpfile("test.vcd");
