@@ -2,7 +2,12 @@
 #+author: tom21487
 
 * Tasks
-** TODO implement add instruction
+** DONE implement push instruction
+** DONE implement add instruction
+** DONE implement noop instruction
+** DONE implement nand instruction
 ** TODO instruction memory
 ** TODO program counter
 ** TODO overflow bit
+** TODO branch instruction
+** TODO assembler
