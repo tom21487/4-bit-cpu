@@ -1,3 +1,4 @@
+// Critical path delay: 40 ns
 module rca(A, B, SUM);
    input [3:0] A;
    input [3:0] B;

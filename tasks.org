@@ -2,12 +2,12 @@
 #+author: tom21487
 
 * Tasks
-** DONE implement push instruction
-** DONE implement add instruction
-** DONE implement noop instruction
-** DONE implement nand instruction
-** TODO instruction memory
-** TODO program counter
-** TODO overflow bit
+** TODO instruction fetch
+- [X] program counter
+- [ ] instruction memory
+- [ ] 16 to 1 MUX
+- [ ] combinational circuit
 ** TODO branch instruction
 ** TODO assembler
+** TODO overflow bit
+Update adder delays (边画图边做)

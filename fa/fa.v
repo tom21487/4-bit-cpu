@@ -1,3 +1,4 @@
+// Critical path delay: 10 ns
 module fa(a, b, c_in, sum, c_out);
    input a;
    input b;
