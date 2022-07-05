@@ -1,0 +1,455 @@
+$date
+	Tue Jul  5 14:26:15 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module testbench $end
+$var wire 1 ! res $end
+$var reg 1 " a $end
+$var reg 1 # b $end
+$var reg 1 $ c $end
+$var reg 1 % d $end
+$var reg 1 & e $end
+$var reg 1 ' f $end
+$var reg 1 ( g $end
+$var reg 1 ) h $end
+$var reg 1 * sel0 $end
+$var reg 1 + sel1 $end
+$var reg 1 , sel2 $end
+$scope module my_mux_8_1_1b $end
+$var wire 1 " a $end
+$var wire 1 # b $end
+$var wire 1 $ c $end
+$var wire 1 % d $end
+$var wire 1 & e $end
+$var wire 1 ' f $end
+$var wire 1 ( g $end
+$var wire 1 ) h $end
+$var wire 1 * sel0 $end
+$var wire 1 + sel1 $end
+$var wire 1 , sel2 $end
+$var wire 1 - y $end
+$var wire 1 . x $end
+$var wire 1 ! res $end
+$scope module mux_2_1_1b_0 $end
+$var wire 1 / a_out $end
+$var wire 1 0 b_out $end
+$var wire 1 1 not_sel $end
+$var wire 1 ! res $end
+$var wire 1 , sel $end
+$var wire 1 - b $end
+$var wire 1 . a $end
+$upscope $end
+$scope module mux_4_1_1b_0 $end
+$var wire 1 " a $end
+$var wire 1 # b $end
+$var wire 1 $ c $end
+$var wire 1 % d $end
+$var wire 1 * sel0 $end
+$var wire 1 + sel1 $end
+$var wire 1 . res $end
+$var wire 1 2 cd_out $end
+$var wire 1 3 ab_out $end
+$scope module mux_2_1_1b_0 $end
+$var wire 1 " a $end
+$var wire 1 4 a_out $end
+$var wire 1 # b $end
+$var wire 1 5 b_out $end
+$var wire 1 6 not_sel $end
+$var wire 1 3 res $end
+$var wire 1 * sel $end
+$upscope $end
+$scope module mux_2_1_1b_1 $end
+$var wire 1 $ a $end
+$var wire 1 7 a_out $end
+$var wire 1 % b $end
+$var wire 1 8 b_out $end
+$var wire 1 9 not_sel $end
+$var wire 1 2 res $end
+$var wire 1 * sel $end
+$upscope $end
+$scope module mux_2_1_1b_2 $end
+$var wire 1 3 a $end
+$var wire 1 : a_out $end
+$var wire 1 2 b $end
+$var wire 1 ; b_out $end
+$var wire 1 < not_sel $end
+$var wire 1 . res $end
+$var wire 1 + sel $end
+$upscope $end
+$upscope $end
+$scope module mux_4_1_1b_1 $end
+$var wire 1 & a $end
+$var wire 1 ' b $end
+$var wire 1 ( c $end
+$var wire 1 ) d $end
+$var wire 1 * sel0 $end
+$var wire 1 + sel1 $end
+$var wire 1 - res $end
+$var wire 1 = cd_out $end
+$var wire 1 > ab_out $end
+$scope module mux_2_1_1b_0 $end
+$var wire 1 & a $end
+$var wire 1 ? a_out $end
+$var wire 1 ' b $end
+$var wire 1 @ b_out $end
+$var wire 1 A not_sel $end
+$var wire 1 > res $end
+$var wire 1 * sel $end
+$upscope $end
+$scope module mux_2_1_1b_1 $end
+$var wire 1 ( a $end
+$var wire 1 B a_out $end
+$var wire 1 ) b $end
+$var wire 1 C b_out $end
+$var wire 1 D not_sel $end
+$var wire 1 = res $end
+$var wire 1 * sel $end
+$upscope $end
+$scope module mux_2_1_1b_2 $end
+$var wire 1 > a $end
+$var wire 1 E a_out $end
+$var wire 1 = b $end
+$var wire 1 F b_out $end
+$var wire 1 G not_sel $end
+$var wire 1 - res $end
+$var wire 1 + sel $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+xG
+xF
+xE
+xD
+xC
+xB
+xA
+x@
+x?
+x>
+x=
+x<
+x;
+x:
+x9
+x8
+x7
+x6
+x5
+x4
+x3
+x2
+x1
+x0
+x/
+x.
+x-
+0,
+0+
+0*
+0)
+0(
+0'
+0&
+0%
+0$
+0#
+1"
+x!
+$end
+#1
+16
+19
+1A
+1D
+1<
+1G
+11
+#3
+0F
+0C
+0B
+0@
+0?
+0;
+08
+07
+05
+00
+#4
+14
+#6
+0=
+0>
+02
+#7
+13
+#9
+0E
+#10
+1:
+#12
+0-
+#13
+1.
+#16
+1/
+#19
+1!
+#21
+1*
+1)
+1(
+1'
+1&
+1%
+1$
+#22
+06
+09
+0A
+0D
+#24
+1C
+1@
+18
+#25
+04
+#27
+1=
+1>
+12
+#28
+03
+#30
+1E
+#31
+0:
+#33
+1-
+#34
+0.
+#37
+0/
+#40
+0!
+#42
+0*
+1+
+0)
+0(
+0'
+0&
+0%
+0"
+#43
+16
+19
+1A
+1D
+0<
+0G
+#45
+1;
+1F
+0C
+0@
+08
+#46
+17
+0E
+#48
+1.
+0=
+0>
+#51
+1/
+0F
+#54
+1!
+0-
+#63
+1*
+1)
+1(
+1'
+1&
+1#
+1"
+#64
+06
+09
+0A
+0D
+#66
+1C
+1@
+15
+#67
+07
+#69
+1=
+1>
+13
+#70
+02
+#72
+1F
+#73
+0;
+#75
+1-
+#76
+0.
+#79
+0/
+#82
+0!
+#84
+0*
+0+
+1,
+0&
+1%
+#85
+16
+19
+1A
+1D
+1<
+1G
+01
+#87
+05
+0@
+0C
+0F
+10
+#88
+14
+17
+1B
+1:
+1E
+#90
+0>
+1!
+#91
+12
+1.
+#93
+0E
+#96
+0-
+#99
+00
+#102
+0!
+#105
+1*
+0)
+0(
+0%
+0$
+0#
+0"
+#106
+06
+09
+0A
+0D
+#108
+1@
+0B
+07
+04
+#111
+1>
+0=
+02
+03
+#114
+1E
+0:
+#117
+1-
+0.
+#120
+10
+#123
+1!
+#126
+0*
+1+
+1)
+1&
+1%
+1$
+1#
+1"
+#127
+16
+19
+1A
+1D
+0<
+0G
+#129
+0@
+#130
+14
+17
+1?
+0E
+#133
+13
+12
+0-
+#136
+1;
+00
+#139
+1.
+0!
+#147
+1*
+0'
+0&
+0%
+0$
+0#
+0"
+#148
+06
+09
+0A
+0D
+#150
+1C
+0?
+07
+04
+#153
+1=
+0>
+02
+03
+#156
+1F
+0;
+#159
+1-
+0.
+#162
+10
+#165
+1!
+#168
