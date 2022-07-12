@@ -4,10 +4,13 @@
 * Tasks
 ** TODO instruction fetch
 - [X] program counter
+- [X] 8 to 1 MUX (1b)
+- [X] 16 to 1 MUX (1b)
+- [ ] 16 to 1 MUX (4b)
 - [ ] instruction memory
-- [ ] 16 to 1 MUX
 - [ ] combinational circuit
 ** TODO branch instruction
 ** TODO assembler
 ** TODO overflow bit
-Update adder delays (边画图边做)
+** TODO update adder delays (边画图边做)
+** TODO Makefile for verilog
