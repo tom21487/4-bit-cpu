@@ -6,8 +6,9 @@
 - [X] program counter
 - [X] 8 to 1 MUX (1b)
 - [X] 16 to 1 MUX (1b)
-- [ ] 16 to 1 MUX (4b)
-- [ ] instruction memory
+- [X] 16 to 1 MUX (4b)
+- [ ] instruction memory register matrix
+- [ ] oscillator
 - [ ] combinational circuit
 ** TODO branch instruction
 ** TODO assembler
