@@ -1,4 +1,4 @@
-// Critical path delay = 28
+// Critical path delay = 28 ns
 module mux_16_1_9b(A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P,
                    sel3, sel2, sel1, sel0, RES);
    input [8:0] A;

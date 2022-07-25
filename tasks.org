@@ -15,3 +15,4 @@
 ** TODO overflow bit
 ** TODO update adder delays (边画图边做)
 ** TODO Makefile for verilog
+** TODO use only NAND gates
