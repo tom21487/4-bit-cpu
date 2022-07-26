@@ -2,16 +2,16 @@
 #+author: tom21487
 
 * Tasks
-** TODO instruction fetch
+** TODO instruction handling
 - [X] program counter
 - [X] 8 to 1 MUX (1b)
 - [X] 16 to 1 MUX (1b)
 - [X] 16 to 1 MUX (4b)
-- [ ] instruction memory register matrix
+- [X] instruction memory
+- [ ] more tests for pc
+- [ ] combinational circuit (ins_dec)
 - [ ] oscillator
-- [ ] combinational circuit
 ** TODO branch instruction
-** TODO assembler
 ** TODO overflow bit
 ** TODO update adder delays (边画图边做)
 ** TODO Makefile for verilog
