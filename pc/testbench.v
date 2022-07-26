@@ -13,6 +13,7 @@ module testbench;
       $dumpvars(0, testbench);
 
       /*
+       test 0
        time: 0 ns
        PC_CURR = 4'bxxxx
        */
@@ -25,8 +26,27 @@ module testbench;
       set_pc = 0;
       
       /*
+       test 1
        time: 81 ns
        PC_CURR = 4'b0000
+       */
+      clk = 0;
+      #24;
+      clk = 1;
+      #57;
+
+      /* test 2
+       time: 162 ns
+       PC_CURR = 4'b0001
+       */
+      clk = 0;
+      #24;
+      clk = 1;
+      #57;
+
+      /* test 3
+       time: 243 ns
+       PC_CURR = 4'b0010
        */
       clk = 0;
       #24;

@@ -1,5 +1,5 @@
 $date
-	Fri Jul  1 13:02:00 2022
+	Tue Jul 26 07:57:46 2022
 $end
 $version
 	Icarus Verilog
@@ -20,12 +20,12 @@ $var wire 4 & PC_REG_IN [3:0] $end
 $var wire 4 ' PC_PLUS_1 [3:0] $end
 $var wire 4 ( PC_CURR_INV [3:0] $end
 $var wire 4 ) PC_CURR [3:0] $end
-$scope module mux_21_4b_0 $end
+$scope module mux_2_1_4b_0 $end
 $var wire 4 * B [3:0] $end
 $var wire 1 $ sel $end
 $var wire 4 + RES [3:0] $end
 $var wire 4 , A [3:0] $end
-$scope module mux_21_1b_0[0] $end
+$scope module mux_2_1_1b_0[0] $end
 $var wire 1 - a $end
 $var wire 1 . a_out $end
 $var wire 1 / b $end
@@ -34,7 +34,7 @@ $var wire 1 1 not_sel $end
 $var wire 1 2 res $end
 $var wire 1 $ sel $end
 $upscope $end
-$scope module mux_21_1b_0[1] $end
+$scope module mux_2_1_1b_0[1] $end
 $var wire 1 3 a $end
 $var wire 1 4 a_out $end
 $var wire 1 5 b $end
@@ -43,7 +43,7 @@ $var wire 1 7 not_sel $end
 $var wire 1 8 res $end
 $var wire 1 $ sel $end
 $upscope $end
-$scope module mux_21_1b_0[2] $end
+$scope module mux_2_1_1b_0[2] $end
 $var wire 1 9 a $end
 $var wire 1 : a_out $end
 $var wire 1 ; b $end
@@ -52,7 +52,7 @@ $var wire 1 = not_sel $end
 $var wire 1 > res $end
 $var wire 1 $ sel $end
 $upscope $end
-$scope module mux_21_1b_0[3] $end
+$scope module mux_2_1_1b_0[3] $end
 $var wire 1 ? a $end
 $var wire 1 @ a_out $end
 $var wire 1 A b $end
@@ -652,3 +652,198 @@ b10 e
 #129
 0z
 #162
+0#
+#163
+1i
+1u
+1#"
+1/"
+#165
+0s
+0~
+0,"
+08"
+#166
+1o
+1|
+1)"
+15"
+#168
+0l
+0v
+#169
+1q
+#170
+1j
+1x
+#171
+0}
+#186
+1#
+#187
+0i
+0u
+0#"
+0/"
+#189
+1r
+1!"
+1,"
+18"
+#190
+0o
+0|
+0)"
+05"
+#191
+0M
+b0 !
+b0 )
+b0 K
+b0 g
+0m
+b1100 (
+b1100 f
+0w
+#193
+1T
+b1101 (
+b1101 f
+1k
+b10 !
+b10 )
+b10 K
+b10 g
+1y
+#194
+0Q
+#195
+1P
+#197
+0I
+1V
+#199
+1-
+b11 '
+b11 ,
+b11 J
+1O
+#202
+1.
+#205
+1h
+b11 &
+b11 +
+b11 e
+12
+#206
+0n
+#243
+0#
+#244
+1i
+1u
+1#"
+1/"
+#246
+0r
+0!"
+0,"
+08"
+#247
+1p
+1|
+1)"
+15"
+#249
+0j
+#251
+1l
+#252
+0q
+#267
+1#
+#268
+0i
+0u
+0#"
+0/"
+#270
+1s
+1!"
+1,"
+18"
+#271
+0p
+0|
+0)"
+05"
+#272
+b1100 (
+b1100 f
+0k
+#274
+1M
+b11 !
+b11 )
+b11 K
+b11 g
+1m
+#277
+1Q
+#278
+0P
+#280
+1I
+#282
+0-
+b10 '
+b10 ,
+b10 J
+0O
+#283
+1X
+#284
+03
+b0 '
+b0 ,
+b0 J
+0U
+#285
+0.
+#286
+1H
+#287
+04
+#288
+0h
+b10 &
+b10 +
+b10 e
+02
+#289
+1n
+#290
+0t
+19
+b0 &
+b0 +
+b0 e
+08
+b100 '
+b100 ,
+b100 J
+1[
+#291
+1z
+#293
+1:
+#296
+1""
+b100 &
+b100 +
+b100 e
+1>
+#297
+0("
+#324
