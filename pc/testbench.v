@@ -1,56 +1,47 @@
 `timescale 1 ns/1 ns	//time scale for simulation
 
 module testbench;
-   reg [3:0] PC_INIT;
+   reg osc_en;
+   wire clk;
+   oscillator my_oscillator(.en(osc_en), .w0(clk));
+   
    reg       set_pc;
-   reg       clk;
    wire [3:0] PC_CURR;
-
-   pc my_pc(.PC_INIT(PC_INIT), .set_pc(set_pc), .clk(clk), .PC_CURR(PC_CURR));
+   pc my_pc(.set_pc(set_pc), .clk(clk), .PC_CURR(PC_CURR));
 
    initial begin
       $dumpfile("test.vcd");
       $dumpvars(0, testbench);
 
+      // Clock init
+      osc_en = 0;
+      #58;
+      osc_en = 1;
+      #58;
+      
       /*
        test 0
-       time: 0 ns
+       time: 116 ns
        PC_CURR = 4'bxxxx
        */
-      PC_INIT = 4'b0000;
+      // clk = 0
       set_pc = 1;
-      clk = 0;
-      #24;
-      clk = 1;
-      #57;
-      set_pc = 0;
+      #58; // mux_21_4b + pc_reg_set
+      // clk = 1
+      #58; // pc_reg_hold + rca
       
       /*
        test 1
-       time: 81 ns
+       time: 232
        PC_CURR = 4'b0000
        */
-      clk = 0;
-      #24;
-      clk = 1;
-      #57;
+      // clk = 0
+      set_pc = 0;
+      #58; // mux_21_4b + pc_reg_set
+      // clk = 1;
+      #58; // pc_reg_hold + rca
 
-      /* test 2
-       time: 162 ns
-       PC_CURR = 4'b0001
-       */
-      clk = 0;
-      #24;
-      clk = 1;
-      #57;
-
-      /* test 3
-       time: 243 ns
-       PC_CURR = 4'b0010
-       */
-      clk = 0;
-      #24;
-      clk = 1;
-      #57;
+      #1856;
+      $finish;
    end
 endmodule

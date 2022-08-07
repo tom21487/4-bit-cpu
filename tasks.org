@@ -8,8 +8,8 @@
 - [X] 16 to 1 MUX (1b)
 - [X] 16 to 1 MUX (4b)
 - [X] instruction memory
-- [ ] logic gate oscillator
-- [ ] test pc loops around
+- [X] logic gate [[https://en.wikipedia.org/wiki/Ring_oscillator][oscillator]]
+- [X] test pc loops around
 - [ ] combinational circuit (ins_dec)
 - next: datapath.v
 ** TODO branch instruction
