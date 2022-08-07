@@ -1,9 +1,7 @@
-// Minimum clock period: 206 ns
-module datapath(clk, set_pc, PC_INIT, PC_CURR, sel_data, write_en, alu_op, R3, R2, R1, R0);
+// Minimum clock period: ??? ns
+module datapath(clk, set_pc, PC_CURR, sel_data, write_en, alu_op, R3, R2, R1, R0);
    input clk;
    input set_pc;
-   input [3:0] PC_INIT;
-   
    output [3:0] R3;
    output [3:0] R2;
    output [3:0] R1;
@@ -11,7 +9,7 @@ module datapath(clk, set_pc, PC_INIT, PC_CURR, sel_data, write_en, alu_op, R3, R
 
    // instruction fetch
    wire [3:0] PC_CURR;
-   pc pc_0(.PC_INIT(PC_INIT), .set_pc(set_pc), .clk(clk), .PC_CURR(PC_CURR));
+   pc pc_0(.PC_INIT(4'b0000), .set_pc(set_pc), .clk(clk), .PC_CURR(PC_CURR));
    wire [8:0]   RES_INS;
    ins_mem ins_mem_0(.PC(PC_CURR), .RES_INS(RES_INS));
 
