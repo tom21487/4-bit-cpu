@@ -1,7 +1,8 @@
 // Minimum clock period: ??? ns
-module datapath(clk, set_pc, PC_CURR, sel_data, write_en, alu_op, R3, R2, R1, R0);
+module datapath(clk, set_pc, en_ins_mem, R3, R2, R1, R0);
    input clk;
    input set_pc;
+   input en_ins_mem;
    output [3:0] R3;
    output [3:0] R2;
    output [3:0] R1;
@@ -9,9 +10,9 @@ module datapath(clk, set_pc, PC_CURR, sel_data, write_en, alu_op, R3, R2, R1, R0
 
    // instruction fetch
    wire [3:0] PC_CURR;
-   pc pc_0(.PC_INIT(4'b0000), .set_pc(set_pc), .clk(clk), .PC_CURR(PC_CURR));
+   pc pc_0(.set_pc(set_pc), .clk(clk), .PC_CURR(PC_CURR));
    wire [8:0]   RES_INS;
-   ins_mem ins_mem_0(.PC(PC_CURR), .RES_INS(RES_INS));
+   ins_mem ins_mem_0(.enable(en_ins_mem), .PC(PC_CURR), .RES_INS(RES_INS));
 
    // instruction decode
    wire sel_data;
@@ -28,8 +29,6 @@ module datapath(clk, set_pc, PC_CURR, sel_data, write_en, alu_op, R3, R2, R1, R0
    wire [3:0] ALU_RES;
    wire [3:0] DATA_IN;
    mux_21_4b mux_21_4b_0(.A(ALU_RES), .B(IMM), .sel(sel_data), .RES(DATA_IN));
-   // This MUX doesn't work if one of the inputs is undefined, is this normal?
-   // (Remove comment if datapath works)
    
    // Register file
    wire [3:0] OUT_A;

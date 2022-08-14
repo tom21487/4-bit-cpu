@@ -1,3 +1,6 @@
+// Reg write setup: 35 ns
+// Reg write hold: 17 ns
+// Reg read (mux_4_1_4b): 14 ns
 module reg_file(SEL_A, SEL_B, write_en, SEL_W, DATA_IN, clk, OUT_A, OUT_B, Q3, Q2, Q1, Q0);
    // IO
    input [1:0] SEL_A;
