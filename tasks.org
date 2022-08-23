@@ -5,10 +5,12 @@
 ** DONE Update ALU
 - [X] Multibit NAND
 - [X] NAND delay 2 ns
-** TODO Finalize datapath.v
+** DONE Finalize datapath.v
 - [X] Fix compilation issues
 - [X] Initial program test in ins_mem.v
 ** TODO Method to store assembly programs
+- [ ] Read from file $fopen()
+- [ ] Store current test
 ** TODO branch instruction
 ** TODO overflow bit
 - [ ] Update adder delays (边画图边做)
