@@ -15,9 +15,9 @@ module testbench;
 
       // Clock init
       osc_en = 0;
-      #58;
+      #136;
       osc_en = 1;
-      #58;
+      #136;
       
       /*
        test 0
@@ -26,9 +26,9 @@ module testbench;
        */
       // clk = 0
       set_pc = 1;
-      #58; // mux_21_4b + pc_reg_set
+      #136; // mux_21_4b + pc_reg_set
       // clk = 1
-      #58; // pc_reg_hold + rca
+      #136; // pc_reg_hold + rca
       
       /*
        test 1
@@ -37,11 +37,11 @@ module testbench;
        */
       // clk = 0
       set_pc = 0;
-      #58; // mux_21_4b + pc_reg_set
+      #136; // mux_21_4b + pc_reg_set
       // clk = 1;
-      #58; // pc_reg_hold + rca
+      #136; // pc_reg_hold + rca
 
-      #1856;
+      #4352; // range
       $finish;
    end
 endmodule

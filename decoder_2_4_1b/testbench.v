@@ -9,7 +9,7 @@ module testbench;
    wire d1;
    wire d0;
 
-   decoder_24_1b decoder_24_1b_0(.w1(w1), .w0(w0), .d3(d3), .d2(d2), .d1(d1), .d0(d0));
+   decoder_2_4_1b decoder_2_4_1b_0(.w1(w1), .w0(w0), .d3(d3), .d2(d2), .d1(d1), .d0(d0));
 
    initial begin
       $dumpfile("test.vcd");

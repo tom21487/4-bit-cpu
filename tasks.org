@@ -2,11 +2,13 @@
 #+author: tom21487
 
 * Tasks
+** DONE Update ALU
+- [X] Multibit NAND
+- [X] NAND delay 2 ns
 ** TODO Finalize datapath.v
-- [ ] ins_mem enable
-- [ ] Update oscillator period
+- [X] Fix compilation issues
+- [X] Initial program test in ins_mem.v
+** TODO Method to store assembly programs
 ** TODO branch instruction
 ** TODO overflow bit
-** TODO update adder delays (边画图边做)
-** TODO Makefile for verilog
-** TODO use only NAND gates
+- [ ] Update adder delays (边画图边做)

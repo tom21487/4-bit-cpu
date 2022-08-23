@@ -1,13 +1,13 @@
-// Critical path delay = period/2 = 57 ns
+// Critical path = period/2 = 136 ns
 module oscillator(en, w0);
+   parameter N = 133; // # of not gates
    input en;
    output w0;
-   wire   r = 0;
-   wire   [55:0] w;
-   and #(3) and_0(w[55], en, w[0]);
+   wire   [N:0] w;
+   and #(3) and_0(w[N], en, w[0]);
    genvar i;
    generate
-      for (i = 54; i >= 0; i = i-1) begin
+      for (i = N-1; i >= 0; i = i-1) begin
          not #(1) not_i(/*输出*/w[i], /*输入*/w[i+1]);
       end
    endgenerate

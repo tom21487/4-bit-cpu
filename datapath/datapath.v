@@ -1,8 +1,7 @@
-// Minimum clock period: ??? ns
-module datapath(clk, set_pc, en_ins_mem, R3, R2, R1, R0);
+// Minimum clock period: 135 ns, but oscillater supports 136 ns
+module datapath(clk, set_pc, R3, R2, R1, R0);
    input clk;
    input set_pc;
-   input en_ins_mem;
    output [3:0] R3;
    output [3:0] R2;
    output [3:0] R1;
@@ -12,7 +11,7 @@ module datapath(clk, set_pc, en_ins_mem, R3, R2, R1, R0);
    wire [3:0] PC_CURR;
    pc pc_0(.set_pc(set_pc), .clk(clk), .PC_CURR(PC_CURR));
    wire [8:0]   RES_INS;
-   ins_mem ins_mem_0(.enable(en_ins_mem), .PC(PC_CURR), .RES_INS(RES_INS));
+   ins_mem ins_mem_0(.PC(PC_CURR), .RES_INS(RES_INS));
 
    // instruction decode
    wire sel_data;
@@ -22,13 +21,13 @@ module datapath(clk, set_pc, en_ins_mem, R3, R2, R1, R0);
    wire [1:0] SEL_B;
    wire [1:0] SEL_W;
    wire [3:0] IMM;
-   ins_dec(.INS(RES_INS), .sel_data(sel_data), .write_en(write_en), .alu_op(alu_op),
+   ins_dec ins_dec_0(.INS(RES_INS), .sel_data(sel_data), .write_en(write_en), .alu_op(alu_op),
            .SEL_A(SEL_A), .SEL_B(SEL_B), .SEL_W(SEL_W), .IMM(IMM));
    
    // Select write data
    wire [3:0] ALU_RES;
    wire [3:0] DATA_IN;
-   mux_21_4b mux_21_4b_0(.A(ALU_RES), .B(IMM), .sel(sel_data), .RES(DATA_IN));
+   mux_2_1_4b mux_2_1_4b_0(.A(ALU_RES), .B(IMM), .sel(sel_data), .RES(DATA_IN));
    
    // Register file
    wire [3:0] OUT_A;
