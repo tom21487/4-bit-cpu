@@ -4,14 +4,14 @@
 # reg2: 4'bxxxx
 # reg1: 4'bxxxx
 # reg0: 4'bxxxx
-push reg0 4'b0110 # instruction 0
+push reg0 0110 # instruction 0
 # start cycle 1
 # current register state
 # reg3: 4'bxxxx
 # reg2: 4'bxxxx
 # reg1: 4'bxxxx
 # reg0: 4'b0110
-push reg1 4'b1101 # instruction 1
+push reg1 1101 # instruction 1
 # start cycle 2
 # current register state
 # reg3: 4'bxxxx
@@ -46,4 +46,67 @@ nand reg2 reg2 reg2
 # reg2: 4'b1100
 # reg1: 4'b1110
 # reg0: 4'b0110
-# no instruction
+noop
+# start cycle 7
+# current register state
+# reg3: 4'bxxxx
+# reg2: 4'b1100
+# reg1: 4'b1110
+# reg0: 4'b0110
+noop
+# start cycle 8
+# current register state
+# reg3: 4'bxxxx
+# reg2: 4'b1100
+# reg1: 4'b1110
+# reg0: 4'b0110
+noop
+# start cycle 9
+# current register state
+# reg3: 4'bxxxx
+# reg2: 4'b1100
+# reg1: 4'b1110
+# reg0: 4'b0110
+noop
+# start cycle 10
+# current register state
+# reg3: 4'bxxxx
+# reg2: 4'b1100
+# reg1: 4'b1110
+# reg0: 4'b0110
+noop
+# start cycle 11
+# current register state
+# reg3: 4'bxxxx
+# reg2: 4'b1100
+# reg1: 4'b1110
+# reg0: 4'b0110
+noop
+# start cycle 12
+# current register state
+# reg3: 4'bxxxx
+# reg2: 4'b1100
+# reg1: 4'b1110
+# reg0: 4'b0110
+noop
+# start cycle 13
+# current register state
+# reg3: 4'bxxxx
+# reg2: 4'b1100
+# reg1: 4'b1110
+# reg0: 4'b0110
+noop
+# start cycle 14
+# current register state
+# reg3: 4'bxxxx
+# reg2: 4'b1100
+# reg1: 4'b1110
+# reg0: 4'b0110
+noop
+# start cycle 15
+# current register state
+# reg3: 4'bxxxx
+# reg2: 4'b1100
+# reg1: 4'b1110
+# reg0: 4'b0110
+noop

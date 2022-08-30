@@ -2,12 +2,6 @@
  * An application of mux_16_1_9b
  * Machine-code is stored here
  * Critical path delay = 28 ns
- * Opcodes:
- * add    -> 000
- * nand   -> 001
- * push   -> 010
- * noop   -> 011
- * branch -> 111
  */
 module ins_mem(PC, RES_INS);
    input [3:0] PC;
