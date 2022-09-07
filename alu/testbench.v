@@ -5,36 +5,31 @@ module testbench;
    reg [3:0] B;
    reg       sel;   
    wire [3:0] RES;
-
-   alu my_alu(.A(A), .B(B), .sel(sel), .RES(RES));
+   wire       eq;
+   alu my_alu(.A(A), .B(B), .sel(sel), .RES(RES), .eq(eq));
 
    initial begin
       $dumpfile("test.vcd");
       $dumpvars(0, testbench);
-      // test0: 3 + 4 = 7
-      A = 4'b0011;
-      B = 4'b0100;
-      sel = 0;
-      #47;
-      // test1: 3 nand 4 = -1
-      A = 4'b0011;
-      B = 4'b0100;
-      sel = 1;
-      #47;
-      // test2: -1 + -5 = -6
+      // test0: -1 + -5 = -6, eq = 0
       A = 4'b1111;
       B = 4'b1011;
       sel = 0;
-      #47;
-      // test3: -4 + 4 = 0
-      A = 4'b1100;
-      B = 4'b0100;
-      sel = 0;
-      #47;
-      // test4: -8 nand -2 = 7
-      A = 4'b1000;
+      #51;
+      // test1: -2 nand -2 = 1, eq = 1
+      A = 4'b1110;
       B = 4'b1110;
       sel = 1;
-      #47;
+      #51;
+      // test2: -8 + -3 = 5 (ovf: should be -11), eq = 0
+      A = 4'b1000;
+      B = 4'b1101;
+      sel = 0;
+      #51;
+      // test3: 5 + 5 = -6 (ovf: should be 10), eq = 1
+      A = 4'b0101;
+      B = 4'b0101;
+      sel = 0;
+      #51;
    end
 endmodule

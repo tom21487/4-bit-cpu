@@ -3,9 +3,9 @@
  * Opcodes:
  * add    -> 000
  * nand   -> 001
- * push   -> 010
+ * move   -> 010
  * noop   -> 011
- * branch -> 111
+ * branch -> 100
  */
 #include "stdio.h"
 #include "stdlib.h"
@@ -47,9 +47,9 @@ char *bin_str(int dec) {
     return res;
 }
 char* get_port(int ins_idx) {
-    char *const res = malloc(sizeof *res * 7);
+    char *const res = malloc(sizeof *res * 9);
     const char alphabet[16] = {'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P'};
-    strcpy(res, ".X(9'b");
+    strcpy(res, ".X(11'b");
     res[1] = alphabet[ins_idx];
     return res;
 }
@@ -73,27 +73,35 @@ void compile(const char *const filename, FILE *const outfile) {
 	    opcode_bin = "000";
 	else if (strcmp(opcode_str, "nand") == 0)
 	    opcode_bin = "001";
-	else if (strcmp(opcode_str, "branch") == 0)
-	    opcode_bin = "111";
 	if (opcode_bin != NULL) {
+            // add/nand
 	    const char *const reg_out_str = strtok(NULL, " ");
 	    char *const reg_out_bin = bin_str(reg_out_str[3]-'0');
 	    const char *const reg_a_str = strtok(NULL, " ");
 	    char *const reg_a_bin = bin_str(reg_a_str[3]-'0');
 	    const char *const reg_b_str = strtok(NULL, " #\n");
 	    char *const reg_b_bin = bin_str(reg_b_str[3]-'0');
-	    fprintf(outfile, "%s%s%s%s", opcode_bin, reg_out_bin, reg_a_bin, reg_b_bin);
+	    fprintf(outfile, "%s00%s%s%s", opcode_bin, reg_out_bin, reg_a_bin, reg_b_bin);
 	    free(reg_out_bin);
 	    free(reg_a_bin);
 	    free(reg_b_bin);
-	} else if (strcmp(opcode_str, "push") == 0) {
+	} else if (strcmp(opcode_str, "move") == 0) {
 	    const char *const reg_out_str = strtok(NULL, " ");
 	    char *const reg_out_bin = bin_str(reg_out_str[3]-'0');
 	    const char *const imm_str = strtok(NULL, " #\n");
-	    fprintf(outfile, "010%s%s", reg_out_bin, imm_str);
+	    fprintf(outfile, "01000%s%s", reg_out_bin, imm_str);
 	    free(reg_out_bin);
+        } else if (strcmp(opcode_str, "branch") == 0) {
+            const char *const jmp_str = strtok(NULL, " ");
+	    const char *const reg_a_str = strtok(NULL, " ");
+	    char *const reg_a_bin = bin_str(reg_a_str[3]-'0');
+	    const char *const reg_b_str = strtok(NULL, " #\n");
+	    char *const reg_b_bin = bin_str(reg_b_str[3]-'0');
+            fprintf(outfile, "100%s%s%s", jmp_str, reg_a_bin, reg_b_bin);
+            free(reg_a_bin);
+            free(reg_b_bin);
 	} else if (strcmp(opcode_str, "noop") == 0) {
-	    fprintf(outfile, "011000000");
+	    fprintf(outfile, "01100000000");
 	} else {
 	    printf("Error unknown opcode_str '%s'\n", opcode_str);
 	    exit(1);

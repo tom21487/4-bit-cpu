@@ -4,14 +4,14 @@
 # reg2: 4'bxxxx
 # reg1: 4'bxxxx
 # reg0: 4'bxxxx
-push reg0 0110 # instruction 0
+move reg0 0110 # instruction 0
 # start cycle 1
 # current register state
 # reg3: 4'bxxxx
 # reg2: 4'bxxxx
 # reg1: 4'bxxxx
 # reg0: 4'b0110
-push reg1 1101 # instruction 1
+move reg1 1101 # instruction 1
 # start cycle 2
 # current register state
 # reg3: 4'bxxxx
@@ -46,7 +46,7 @@ nand reg2 reg2 reg2
 # reg2: 4'b1100
 # reg1: 4'b1110
 # reg0: 4'b0110
-noop
+branch 0101 reg0 reg1
 # start cycle 7
 # current register state
 # reg3: 4'bxxxx

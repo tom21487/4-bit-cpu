@@ -1,5 +1,5 @@
 $date
-	Sat Aug 13 16:21:07 2022
+	Sat Sep  3 22:09:51 2022
 $end
 $version
 	Icarus Verilog
@@ -21,20 +21,28 @@ $var wire 9 ) INS [8:0] $end
 $var wire 1 # alu_op $end
 $var wire 1 " sel_data $end
 $var wire 1 * w0 $end
+$var wire 1 + w1 $end
+$var wire 1 , w2 $end
+$var wire 1 - w3 $end
+$var wire 1 . w4 $end
 $var wire 1 ! write_en $end
-$var wire 2 + SEL_W [1:0] $end
-$var wire 2 , SEL_B [1:0] $end
-$var wire 2 - SEL_A [1:0] $end
-$var wire 4 . IMM [3:0] $end
+$var wire 2 / SEL_W [1:0] $end
+$var wire 2 0 SEL_B [1:0] $end
+$var wire 2 1 SEL_A [1:0] $end
+$var wire 4 2 IMM [3:0] $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
 #0
 $dumpvars
-bx .
-bx -
-bx ,
-bx +
+bx 2
+bx 1
+bx 0
+bx /
+x.
+x-
+x,
+x+
 x*
 b1 )
 b1 (
@@ -48,96 +56,130 @@ x!
 $end
 #1
 0"
+1*
+1+
+1,
 0#
 b0 &
-b0 -
+b0 1
 b1 %
-b1 ,
+b1 0
 b0 $
-b0 +
+b0 /
 b1 '
-b1 .
-#3
-0*
+b1 2
 #4
+1-
+1.
+#7
 1!
 b10 (
 b10 )
-#5
-b10 %
-b10 ,
-b10 '
-b10 .
 #8
+b10 %
+b10 0
+b10 '
+b10 2
+#14
 b100 (
 b100 )
-#9
+#15
 b1 &
-b1 -
+b1 1
 b0 %
-b0 ,
+b0 0
 b100 '
-b100 .
-#12
+b100 2
+#21
 b1000 (
 b1000 )
-#13
+#22
 b10 &
-b10 -
+b10 1
 b1000 '
-b1000 .
-#16
+b1000 2
+#28
 b10000 (
 b10000 )
-#17
+#29
 b0 &
-b0 -
+b0 1
 b1 $
-b1 +
+b1 /
 b0 '
-b0 .
-#20
+b0 2
+#35
 b100000 (
 b100000 )
-#21
+#36
 b10 $
-b10 +
-#24
+b10 /
+#42
 b1000000 (
 b1000000 )
-#25
+#43
+0+
 1#
 b0 $
-b0 +
-#28
+b0 /
+#49
 b10000000 (
 b10000000 )
-#29
+#50
 1"
+0*
+1+
 0#
-#32
+#56
 b100000000 (
 b100000000 )
-#33
+#57
 0"
-#36
+1*
+0,
+#60
+0.
+#63
+0!
 b0 (
 b0 )
-#40
+#64
+1,
+#67
+1.
+#70
+1!
 b111111111 (
 b111111111 )
-#41
+#71
 1"
+0*
+0+
+0,
 1#
 b11 &
-b11 -
+b11 1
 b11 %
-b11 ,
+b11 0
 b11 $
-b11 +
+b11 /
 b1111 '
-b1111 .
-#43
-1*
-#44
+b1111 2
+#77
+b11000000 (
+b11000000 )
+#78
+1,
+b0 &
+b0 1
+b0 %
+b0 0
+b0 $
+b0 /
+b0 '
+b0 2
+#80
+0-
+#83
 0!
+#84

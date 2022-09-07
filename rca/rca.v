@@ -1,8 +1,9 @@
-// Critical path delay: 40 ns
-module rca(A, B, SUM);
+// Critical path delay: 44 ns
+module rca(A, B, SUM, ovf);
    input [3:0] A;
    input [3:0] B;
    output [3:0] SUM;
+   output       ovf;
    wire         c_out0;
    fa fa0(.a(A[0]), .b(B[0]), .c_in(1'b0), .sum(SUM[0]), .c_out(c_out0));
    wire         c_out1;
@@ -11,4 +12,5 @@ module rca(A, B, SUM);
    fa fa2(.a(A[2]), .b(B[2]), .c_in(c_out1), .sum(SUM[2]), .c_out(c_out2));
    wire         c_out3;
    fa fa3(.a(A[3]), .b(B[3]), .c_in(c_out2), .sum(SUM[3]), .c_out(c_out3));
+   xor #(4) xor_0(ovf, c_out2, c_out3);
 endmodule
