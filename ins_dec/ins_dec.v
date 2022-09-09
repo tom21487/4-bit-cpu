@@ -20,7 +20,7 @@ module ins_dec(INS, sel_data, write_en, alu_op, SEL_A, SEL_B, SEL_W, IMM, JMP);
    or #(3) or_1(w4, w2, INS[9], INS[8]);
    and #(3) and_0(write_en, w3, w4);
    // alu_op = INS[8]
-   buf #(1) buf_1(alu_op, INS[6]);
+   buf #(1) buf_1(alu_op, INS[8]);
    // SEL_A = INS[3:2]
    buf #(1) buf_2(SEL_A[1], INS[3]);
    buf #(1) buf_3(SEL_A[0], INS[2]);
