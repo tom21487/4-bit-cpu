@@ -3,10 +3,11 @@
 module testbench;
    reg [3:0] A;
    reg [3:0] B;
-   reg       sel;   
+   reg sel;   
    wire [3:0] RES;
-   wire       eq;
-   alu my_alu(.A(A), .B(B), .sel(sel), .RES(RES), .eq(eq));
+   wire eq;
+   wire ovf;
+   alu my_alu(.A(A), .B(B), .sel(sel), .RES(RES), .eq(eq), .ovf(ovf));
 
    initial begin
       $dumpfile("test.vcd");

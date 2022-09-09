@@ -10,8 +10,8 @@ module testbench;
       $dumpfile("test.vcd");
       $dumpvars(0, testbench);
       en = 0;
-      #136;
+      #76;
       en = 1; // then oscillator will run until $finish
-      #544 $finish; // finish simulation
+      #304 $finish; // finish simulation
    end
 endmodule

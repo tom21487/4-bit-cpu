@@ -1,13 +1,14 @@
 // Critical path delay = 51 ns
-module alu(A, B, sel, RES, eq);
+module alu(A, B, sel, RES, eq, ovf);
    input [3:0] A;
    input [3:0] B;
-   input       sel;
+   input sel;
    output [3:0] RES;
-   output       eq;
+   output eq;
+   output ovf;
    
    wire [3:0]  W0;
-   rca rca_0(.A(A), .B(B), .SUM(W0));
+   rca rca_0(.A(A), .B(B), .SUM(W0), .ovf(ovf));
    wire [3:0] W1;
    wire [3:0] W2;
    genvar i;

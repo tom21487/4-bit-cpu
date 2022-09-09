@@ -1,5 +1,5 @@
-// Min setup time = 35 ns
-// Min hold time = 61 ns
+// Min setup time = 75 ns
+// Min hold time = 17 ns
 module pc(set_pc, alu_eq, clk, INS, PC_CURR);
    input set_pc;
    input alu_eq;

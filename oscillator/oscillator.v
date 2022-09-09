@@ -1,6 +1,6 @@
-// Critical path = period/2 = 136 ns
+// Critical path = period/2 = 76 ns
 module oscillator(en, w0);
-   parameter N = 133; // # of not gates
+   parameter N = 73; // # of not gates
    input en;
    output w0;
    wire   [N:0] w;

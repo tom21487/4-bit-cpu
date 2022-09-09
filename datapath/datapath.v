@@ -1,4 +1,4 @@
-// Minimum clock period: 135 ns, but oscillater supports 136 ns
+// clock period = 2*76 ns = 152 ns
 module datapath(clk, set_pc, R3, R2, R1, R0);
    input clk;
    input set_pc;
@@ -9,7 +9,7 @@ module datapath(clk, set_pc, R3, R2, R1, R0);
 
    // instruction fetch
    wire [3:0] PC_CURR;
-   pc pc_0(.set_pc(set_pc), .clk(clk), .PC_CURR(PC_CURR));
+   pc pc_0(.set_pc(set_pc), .alu_eq(), .clk(clk), .PC_CURR(PC_CURR));
    wire [8:0]   RES_INS;
    ins_mem ins_mem_0(.PC(PC_CURR), .RES_INS(RES_INS));
 
