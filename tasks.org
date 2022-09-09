@@ -24,7 +24,7 @@
 - [X] Update assembler (including "push" -> "move")
 - [X] Update ins_dec
 *** Branch instruction
-- [ ] Update pc
+- [X] Update pc
 - [ ] Update oscillator period
 - [ ] Update datapath for 11-bit instructions and branch instructions
 ** TODO Update to 16-bit instructions for consistency

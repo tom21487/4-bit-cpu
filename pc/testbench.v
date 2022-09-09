@@ -3,9 +3,10 @@
 module testbench;
    reg set_pc;
    reg alu_eq;
-   wire clk;
+   reg clk;
+   reg [10:0] INS;
    wire [3:0] PC_CURR;
-   pc my_pc(.set_pc(set_pc), .alu_eq(alu_eq), .clk(clk), .PC_CURR(PC_CURR));
+   pc my_pc(.set_pc(set_pc), .alu_eq(alu_eq), .clk(clk), .INS(INS), .PC_CURR(PC_CURR));
 
    initial begin
       $dumpfile("test.vcd");
@@ -15,219 +16,220 @@ module testbench;
        time: 0 ns
        PC_CURR = 4'bxxxx
        */
+      INS = 11'b01100000000;
       alu_eq = 1;
       clk = 0;
       set_pc = 1;
-      #35;
-      clk = 1
-      #61;
+      #75;
+      clk = 1;
+      #17;
       
       /*
        test 1
-       time: 96 ns
+       time: 92 ns
        PC_CURR = 4'b0000
        */
       clk = 0;
       set_pc = 0;
-      #35;
+      #75;
       clk = 1;
-      #61;
+      #17;
 
       /*
        test 2
-       time: 192 ns
+       time: 184 ns
        PC_CURR = 4'b0001
        */
       clk = 0;
-      #35;
+      #75;
       clk = 1;
-      #61;
+      #17;
 
       /*
        test 3
-       time: 288 ns
+       time: 276 ns
        PC_CURR = 4'b0010
        */
       clk = 0;
-      #35;
+      #75;
       clk = 1;
-      #61;
+      #17;
 
       /*
        test 4
-       time: 384 ns
+       time: 368 ns
        PC_CURR = 4'b0011
        */
       clk = 0;
-      #35;
+      #75;
       clk = 1;
-      #61;
+      #17;
 
       /*
        test 5
-       time: 480 ns
+       time: 460 ns
        PC_CURR = 4'b0100
        */
       clk = 0;
-      #35;
+      #75;
       clk = 1;
-      #61;
+      #17;
 
       /*
        test 6
-       time: 576 ns
+       time: 552 ns
        PC_CURR = 4'b0101
        */
       clk = 0;
-      #35;
+      #75;
       clk = 1;
-      #61;
+      #17;
 
       /*
        test 7
-       time: 672 ns
+       time: 644 ns
        PC_CURR = 4'b0110
        */
       clk = 0;
-      #35;
+      #75;
       clk = 1;
-      #61;
+      #17;
 
       /*
        test 8
-       time: 768 ns
+       time: 736 ns
        PC_CURR = 4'b0111
        */
       clk = 0;
-      #35;
+      #75;
       clk = 1;
-      #61;
+      #17;
 
       /*
        test 9
-       time: 864 ns
+       time: 828 ns
        PC_CURR = 4'b1000
-       rca_0 flow
        */
       clk = 0;
-      #35;
+      #75;
       clk = 1;
-      #61;
+      #17;
 
       /*
        test 10
-       time: 960 ns
+       time: 920 ns
        PC_CURR = 4'b1001
        */
       clk = 0;
-      #35;
+      #75;
       clk = 1;
-      #61;
+      #17;
 
       /*
        test 11
-       time: 1056 ns
+       time: 1012 ns
        PC_CURR = 4'b1010
        */
       clk = 0;
-      #35;
+      #75;
       clk = 1;
-      #61;
+      #17;
 
       /*
        test 12
-       time: 1152 ns
+       time: 1104 ns
        PC_CURR = 4'b1011
        */
       clk = 0;
-      #35;
+      #75;
       clk = 1;
-      #61;
+      #17;
 
       /*
        test 13
-       time: 1248 ns
+       time: 1196 ns
        PC_CURR = 4'b1100
        */
       clk = 0;
-      #35;
+      #75;
       clk = 1;
-      #61;
+      #17;
 
       /*
        test 14
-       time: 1344 ns
+       time: 1288 ns
        PC_CURR = 4'b1101
        */
       clk = 0;
-      #35;
+      #75;
       clk = 1;
-      #61;
+      #17;
 
       /*
        test 15
-       time: 1440 ns
+       time: 1380 ns
        PC_CURR = 4'b1110
        */
       clk = 0;
-      #35;
+      #75;
       clk = 1;
-      #61;
+      #17;
 
       /*
        test 16
-       time: 1536 ns
+       time: 1472 ns
        PC_CURR = 4'b1111
        */
       clk = 0;
-      #35;
+      #75;
       clk = 1;
-      #61;
+      #17;
 
       /*
        test 17
-       time: 1632 ns
+       time: 1564 ns
        PC_CURR = 4'b0000
        INS -> branch + 7
        */
+      INS = 11'b10001110000;
       clk = 0;
-      #35;
+      #75;
       clk = 1;
-      #61;
+      #17;
 
       /*
        test 18
-       time: 1728 ns
+       time: 1656 ns
        PC_CURR = 4'b0111
        INS -> branch - 8
        */
+      INS = 11'b10011100000;
       clk = 0;
-      #35;
+      #75;
       clk = 1;
-      #61;
+      #17;
 
       /*
        test 19
-       time: 1824 ns
+       time: 1748 ns
        PC_CURR = 4'b1111
-       rca_0 overflow
-       rca_1 overflow
        INS -> branch + 0
        */
+      INS = 11'b10000000000;
       clk = 0;
-      #35;
+      #75;
       clk = 1;
-      #61;
+      #17;
 
       /*
        test 20
-       time: 1920 ns
+       time: 1840 ns
        PC_CURR = 4'b1111
        */
       clk = 0;
-      #35;
+      #75;
       clk = 1;
-      #61;
+      #17;
       
       $finish;
    end
