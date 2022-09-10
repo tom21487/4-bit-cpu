@@ -22,7 +22,7 @@ For all instructions' machine code
 
 - Bits[15:8]: opcode
 
-add regd rega regb
+**add regd rega regb**
 
 - Opcode: 00000000
 - Effect: regd = rega + regb, PC += 1
@@ -33,7 +33,7 @@ add regd rega regb
   - Bits[3:2]: a
   - Bits[1:0]: b
 
-nand regd rega regb
+**nand regd rega regb**
 
 - Opcode: 00000001
 - Effect: regd = rega ↑ regb, PC += 1
@@ -44,7 +44,7 @@ nand regd rega regb
   - Bits[3:2]: a
   - Bits[1:0]: b
 
-move regd IMM
+**move regd IMM**
 
 - Opcode: 00000010
 - Effect: regd = IMM, PC += 1
@@ -55,7 +55,7 @@ move regd IMM
   - Bits[5:4]: d
   - Bits[3:0]: IMM
 
-noop
+**noop**
 
 - Opcode: 00000011
 - Effect: PC += 1
@@ -63,7 +63,7 @@ noop
 - Machine code
   - Bits[7:0]: unused
 
-branch JMP rega regb
+**branch JMP rega regb**
 
 - Opcode: 00000100
 - Effect: PC = (rega == regb) ? PC + JMP : PC + 1
@@ -76,31 +76,41 @@ branch JMP rega regb
 
 
 ## Schematic
-Schematic generated using Intel Quartus Prime.
+High-level schematic of datapath, generated using [Intel Quartus Prime](https://www.intel.com/content/www/us/en/products/details/fpga/development-tools/quartus-prime.html)
 
 ![schematic](schematic.png "schematic")
 
 ## Getting started
 This is an example of running an assembly file on the CPU.
-This example uses Icarus Verilog and GTKWave on Linux.
+This example uses [Icarus Verilog](http://iverilog.icarus.com/) and [GTKWave](http://gtkwave.sourceforge.net/) on Linux.
 
 1. Locate assembly file, i.e. ins_mem/programs/general.tass
 2. Build instruction memory module
 ```
-cd ins_mem/
-./assembler programs/general.tass
-cd ../
+$ pwd
+<4-bit-cpu>
+$ cd ins_mem/
+$ ./assembler programs/general.tass
+$ cd ../
 ```
 3. Build datapath module
 ```
-cd datapath/
-./build.sh
-vvp testbench
-cd ../
+$ pwd
+<4-bit-cpu>
+$ cd datapath/
+$ ./build.sh
+```
+3. Run simulation
+```
+$ pwd
+<4-bit-cpu>/datapath
+$ vvp testbench
 ```
 4. View waveform
 ```
-gtkwave datapath/test.vcd
+$ pwd
+<4-bit-cpu>/datapath
+$ gtkwave datapath/test.vcd
 ```
 
 ![waveform](waveform.png "waveform")
