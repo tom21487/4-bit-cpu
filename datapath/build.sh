@@ -15,7 +15,7 @@ iverilog -o testbench \
 ../alu/alu.v \
 ../sr_latch/sr_latch.v \
 ../d_latch/d_latch.v \
-../dff/dff.v \
+../dffp/dffp.v \
 ../reg4/reg4.v \
 ../reg_file/reg_file.v \
 ../ins_mem/ins_mem.v \

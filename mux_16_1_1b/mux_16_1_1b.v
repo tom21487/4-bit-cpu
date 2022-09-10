@@ -30,4 +30,4 @@ module mux_16_1_1b(a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p,
    mux_8_1_1b mux_8_1_1b_1(.a(i), .b(j), .c(k), .d(l), .e(m), .f(n), .g(o), .h(p),
                            .sel2(sel2), .sel1(sel1), .sel0(sel0), .res(y));
    mux_2_1_1b mux_2_1_1b_0(.a(x), .b(y), .sel(sel3), .res(res));
-endmodule; // mux_16_1_1b
+endmodule // mux_16_1_1b

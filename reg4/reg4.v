@@ -6,5 +6,5 @@ module reg4(D, clk, Q, QB);
    output [3:0] Q;
    output [3:0] QB;
 
-   dff DFF[3:0](.d(D), .clk(clk), .q(Q), .qb(QB));
-endmodule; // reg4
+   dffp DFFP_0[3:0](.d(D), .clk(clk), .q(Q), .qb(QB));
+endmodule // reg4

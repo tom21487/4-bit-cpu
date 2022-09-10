@@ -12,4 +12,4 @@ module mux_4_1_1b(a, b, c, d, sel1, sel0, res);
    wire   cd_out;
    mux_2_1_1b mux_2_1_1b_1(.a(c), .b(d), .sel(sel0), .res(cd_out));
    mux_2_1_1b mux_2_1_1b_2(.a(ab_out), .b(cd_out), .sel(sel1), .res(res));
-endmodule; // mux_4_1_1b
+endmodule // mux_4_1_1b

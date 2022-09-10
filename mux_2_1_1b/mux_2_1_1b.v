@@ -13,7 +13,7 @@ module mux_2_1_1b(a, b, sel, res);
    wire   b_out;
    and #(3) and1(b_out, b, sel);
    or #(3) and2(res, a_out, b_out);
-endmodule; // mux1
+endmodule // mux1
 
    
    

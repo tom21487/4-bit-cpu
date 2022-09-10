@@ -40,4 +40,4 @@ module datapath(clk, set_pc, R3, R2, R1, R0, alu_eq, alu_ovf);
 
    // ALU
    alu alu_0(.A(OUT_A), .B(OUT_B), .sel(alu_op), .RES(ALU_RES), .eq(alu_eq), .ovf(alu_ovf));
-endmodule;
+endmodule

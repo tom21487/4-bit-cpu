@@ -20,4 +20,4 @@ module mux_8_1_1b(a, b, c, d, e, f, g, h, sel2, sel1, sel0, res);
    mux_4_1_1b mux_4_1_1b_1(.a(e), .b(f), .c(g), .d(h),
                            .sel1(sel1), .sel0(sel0), .res(y));
    mux_2_1_1b mux_2_1_1b_0(.a(x), .b(y), .sel(sel2), .res(res));
-endmodule;
+endmodule

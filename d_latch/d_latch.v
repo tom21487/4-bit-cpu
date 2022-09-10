@@ -11,4 +11,4 @@ module d_latch(d, g, q, qb);
    wire   s;
    and #(3) and1(s, d, g);
    sr_latch sr_latch_0(.r(r), .s(s), .q(q), .qb(qb));
-endmodule; // d_latch
+endmodule // d_latch

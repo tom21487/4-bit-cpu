@@ -30,4 +30,4 @@ module mux_16_1_16b(A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P,
                                   .sel3(sel3), .sel2(sel2),
                                   .sel1(sel1), .sel0(sel0),
                                   .res(RES));
-endmodule;
+endmodule

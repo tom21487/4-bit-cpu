@@ -22,4 +22,4 @@ module pc(set_pc, alu_eq, clk, INS, PC_CURR);
    reg4 pc_reg(.D(PC_REG_IN), .clk(clk), .Q(PC_CURR), .QB(PC_CURR_INV));
    rca rca_0(.A(4'b0001), .B(PC_CURR), .SUM(PC_PLUS_ONE));
    rca rca_1(.A(INS[7:4]), .B(PC_CURR), .SUM(PC_PLUS_JMP));
-endmodule;
+endmodule

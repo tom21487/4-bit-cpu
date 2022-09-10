@@ -7,7 +7,7 @@ module testbench;
    wire q;
    wire qb;
 
-   dff dff_0(.d(d), .clk(clk), .q(q), .qb(qb));
+   dffp dffp_0(.d(d), .clk(clk), .q(q), .qb(qb));
 
    initial begin
       $dumpfile("test.vcd");

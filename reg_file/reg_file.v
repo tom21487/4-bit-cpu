@@ -58,4 +58,4 @@ module reg_file(SEL_A, SEL_B, write_en, SEL_W, DATA_IN, clk, OUT_A, OUT_B, Q3, Q
                          .RES(OUT_A));
    mux_4_1_4b mux_4_1_4b_1(.A(Q0), .B(Q1), .C(Q2), .D(Q3), .sel1(SEL_B[1]), .sel0(SEL_B[0]),
                          .RES(OUT_B));
-endmodule; // reg_file
+endmodule // reg_file

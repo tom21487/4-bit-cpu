@@ -6,4 +6,4 @@ module sr_latch(r, s, q, qb);
    output qb;
    nor #(2) nor0(q, r, qb);
    nor #(2) nor1(qb, q, s);
-endmodule; // sr_latch
+endmodule // sr_latch

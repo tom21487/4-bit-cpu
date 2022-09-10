@@ -7,9 +7,9 @@ module oscillator(en, w0);
    and #(3) and_0(w[N], en, w[0]);
    genvar i;
    generate
-      for (i = N-1; i >= 0; i = i-1) begin
+      for (i = N-1; i >= 0; i = i-1) begin : gen_not_gates
          not #(1) not_i(/*输出*/w[i], /*输入*/w[i+1]);
       end
    endgenerate
    buf buf_0(w0, w[0]);
-endmodule;
+endmodule

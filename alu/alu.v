@@ -15,8 +15,8 @@ module alu(A, B, sel, RES, eq, ovf);
    wire [3:0] W2;
    genvar i;
    generate
-      for (i = 3; i >= 0; i = i-1) begin
-	 nand #(2) nand_0(W1[i], A[i], B[i]);
+      for (i = 3; i >= 0; i = i-1) begin : gen_operations
+		   nand #(2) nand_0(W1[i], A[i], B[i]);
          xnor #(5) xnor_0(W2[i], A[i], B[i]);
       end
    endgenerate

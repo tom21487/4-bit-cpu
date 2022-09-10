@@ -1,5 +1,5 @@
 $date
-	Sat Sep 10 14:08:00 2022
+	Sat Sep 10 17:04:52 2022
 $end
 $version
 	Icarus Verilog
@@ -50,13 +50,13 @@ $var wire 4 > W0 [3:0] $end
 $var wire 4 ? RES [3:0] $end
 $var wire 4 @ B [3:0] $end
 $var wire 4 A A [3:0] $end
-$scope begin genblk1[0] $end
+$scope begin gen_operations[0] $end
 $upscope $end
-$scope begin genblk1[1] $end
+$scope begin gen_operations[1] $end
 $upscope $end
-$scope begin genblk1[2] $end
+$scope begin gen_operations[2] $end
 $upscope $end
-$scope begin genblk1[3] $end
+$scope begin gen_operations[3] $end
 $upscope $end
 $scope module mux_2_1_4b_0 $end
 $var wire 4 B B [3:0] $end
@@ -4115,7 +4115,7 @@ $var wire 4 80 D [3:0] $end
 $var wire 1 ! clk $end
 $var wire 4 90 QB [3:0] $end
 $var wire 4 :0 Q [3:0] $end
-$scope module DFF[0] $end
+$scope module DFFP_0[0] $end
 $var wire 1 ;0 d $end
 $var wire 1 <0 nclk $end
 $var wire 1 =0 qb_tmp $end
@@ -4154,7 +4154,7 @@ $var wire 1 F0 s $end
 $upscope $end
 $upscope $end
 $upscope $end
-$scope module DFF[1] $end
+$scope module DFFP_0[1] $end
 $var wire 1 G0 d $end
 $var wire 1 H0 nclk $end
 $var wire 1 I0 qb_tmp $end
@@ -4193,7 +4193,7 @@ $var wire 1 R0 s $end
 $upscope $end
 $upscope $end
 $upscope $end
-$scope module DFF[2] $end
+$scope module DFFP_0[2] $end
 $var wire 1 S0 d $end
 $var wire 1 T0 nclk $end
 $var wire 1 U0 qb_tmp $end
@@ -4232,7 +4232,7 @@ $var wire 1 ^0 s $end
 $upscope $end
 $upscope $end
 $upscope $end
-$scope module DFF[3] $end
+$scope module DFFP_0[3] $end
 $var wire 1 _0 d $end
 $var wire 1 `0 nclk $end
 $var wire 1 a0 qb_tmp $end
@@ -4943,7 +4943,7 @@ $var wire 4 ]4 D [3:0] $end
 $var wire 1 ! clk $end
 $var wire 4 ^4 QB [3:0] $end
 $var wire 4 _4 Q [3:0] $end
-$scope module DFF[0] $end
+$scope module DFFP_0[0] $end
 $var wire 1 `4 d $end
 $var wire 1 a4 nclk $end
 $var wire 1 b4 qb_tmp $end
@@ -4982,7 +4982,7 @@ $var wire 1 k4 s $end
 $upscope $end
 $upscope $end
 $upscope $end
-$scope module DFF[1] $end
+$scope module DFFP_0[1] $end
 $var wire 1 l4 d $end
 $var wire 1 m4 nclk $end
 $var wire 1 n4 qb_tmp $end
@@ -5021,7 +5021,7 @@ $var wire 1 w4 s $end
 $upscope $end
 $upscope $end
 $upscope $end
-$scope module DFF[2] $end
+$scope module DFFP_0[2] $end
 $var wire 1 x4 d $end
 $var wire 1 y4 nclk $end
 $var wire 1 z4 qb_tmp $end
@@ -5060,7 +5060,7 @@ $var wire 1 %5 s $end
 $upscope $end
 $upscope $end
 $upscope $end
-$scope module DFF[3] $end
+$scope module DFFP_0[3] $end
 $var wire 1 &5 d $end
 $var wire 1 '5 nclk $end
 $var wire 1 (5 qb_tmp $end
@@ -5105,7 +5105,7 @@ $var wire 4 25 D [3:0] $end
 $var wire 1 ! clk $end
 $var wire 4 35 QB [3:0] $end
 $var wire 4 45 Q [3:0] $end
-$scope module DFF[0] $end
+$scope module DFFP_0[0] $end
 $var wire 1 55 d $end
 $var wire 1 65 nclk $end
 $var wire 1 75 qb_tmp $end
@@ -5144,7 +5144,7 @@ $var wire 1 @5 s $end
 $upscope $end
 $upscope $end
 $upscope $end
-$scope module DFF[1] $end
+$scope module DFFP_0[1] $end
 $var wire 1 A5 d $end
 $var wire 1 B5 nclk $end
 $var wire 1 C5 qb_tmp $end
@@ -5183,7 +5183,7 @@ $var wire 1 L5 s $end
 $upscope $end
 $upscope $end
 $upscope $end
-$scope module DFF[2] $end
+$scope module DFFP_0[2] $end
 $var wire 1 M5 d $end
 $var wire 1 N5 nclk $end
 $var wire 1 O5 qb_tmp $end
@@ -5222,7 +5222,7 @@ $var wire 1 X5 s $end
 $upscope $end
 $upscope $end
 $upscope $end
-$scope module DFF[3] $end
+$scope module DFFP_0[3] $end
 $var wire 1 Y5 d $end
 $var wire 1 Z5 nclk $end
 $var wire 1 [5 qb_tmp $end
@@ -5267,7 +5267,7 @@ $var wire 4 e5 D [3:0] $end
 $var wire 1 ! clk $end
 $var wire 4 f5 QB [3:0] $end
 $var wire 4 g5 Q [3:0] $end
-$scope module DFF[0] $end
+$scope module DFFP_0[0] $end
 $var wire 1 h5 d $end
 $var wire 1 i5 nclk $end
 $var wire 1 j5 qb_tmp $end
@@ -5306,7 +5306,7 @@ $var wire 1 s5 s $end
 $upscope $end
 $upscope $end
 $upscope $end
-$scope module DFF[1] $end
+$scope module DFFP_0[1] $end
 $var wire 1 t5 d $end
 $var wire 1 u5 nclk $end
 $var wire 1 v5 qb_tmp $end
@@ -5345,7 +5345,7 @@ $var wire 1 !6 s $end
 $upscope $end
 $upscope $end
 $upscope $end
-$scope module DFF[2] $end
+$scope module DFFP_0[2] $end
 $var wire 1 "6 d $end
 $var wire 1 #6 nclk $end
 $var wire 1 $6 qb_tmp $end
@@ -5384,7 +5384,7 @@ $var wire 1 -6 s $end
 $upscope $end
 $upscope $end
 $upscope $end
-$scope module DFF[3] $end
+$scope module DFFP_0[3] $end
 $var wire 1 .6 d $end
 $var wire 1 /6 nclk $end
 $var wire 1 06 qb_tmp $end
@@ -5429,7 +5429,7 @@ $var wire 4 :6 D [3:0] $end
 $var wire 1 ! clk $end
 $var wire 4 ;6 QB [3:0] $end
 $var wire 4 <6 Q [3:0] $end
-$scope module DFF[0] $end
+$scope module DFFP_0[0] $end
 $var wire 1 =6 d $end
 $var wire 1 >6 nclk $end
 $var wire 1 ?6 qb_tmp $end
@@ -5468,7 +5468,7 @@ $var wire 1 H6 s $end
 $upscope $end
 $upscope $end
 $upscope $end
-$scope module DFF[1] $end
+$scope module DFFP_0[1] $end
 $var wire 1 I6 d $end
 $var wire 1 J6 nclk $end
 $var wire 1 K6 qb_tmp $end
@@ -5507,7 +5507,7 @@ $var wire 1 T6 s $end
 $upscope $end
 $upscope $end
 $upscope $end
-$scope module DFF[2] $end
+$scope module DFFP_0[2] $end
 $var wire 1 U6 d $end
 $var wire 1 V6 nclk $end
 $var wire 1 W6 qb_tmp $end
@@ -5546,7 +5546,7 @@ $var wire 1 `6 s $end
 $upscope $end
 $upscope $end
 $upscope $end
-$scope module DFF[3] $end
+$scope module DFFP_0[3] $end
 $var wire 1 a6 d $end
 $var wire 1 b6 nclk $end
 $var wire 1 c6 qb_tmp $end
@@ -5592,279 +5592,279 @@ $scope module my_oscillator $end
 $var wire 1 ( en $end
 $var wire 1 ! w0 $end
 $var wire 138 m6 w [137:0] $end
-$scope begin genblk1[0] $end
+$scope begin gen_not_gates[0] $end
 $upscope $end
-$scope begin genblk1[1] $end
+$scope begin gen_not_gates[1] $end
 $upscope $end
-$scope begin genblk1[2] $end
+$scope begin gen_not_gates[2] $end
 $upscope $end
-$scope begin genblk1[3] $end
+$scope begin gen_not_gates[3] $end
 $upscope $end
-$scope begin genblk1[4] $end
+$scope begin gen_not_gates[4] $end
 $upscope $end
-$scope begin genblk1[5] $end
+$scope begin gen_not_gates[5] $end
 $upscope $end
-$scope begin genblk1[6] $end
+$scope begin gen_not_gates[6] $end
 $upscope $end
-$scope begin genblk1[7] $end
+$scope begin gen_not_gates[7] $end
 $upscope $end
-$scope begin genblk1[8] $end
+$scope begin gen_not_gates[8] $end
 $upscope $end
-$scope begin genblk1[9] $end
+$scope begin gen_not_gates[9] $end
 $upscope $end
-$scope begin genblk1[10] $end
+$scope begin gen_not_gates[10] $end
 $upscope $end
-$scope begin genblk1[11] $end
+$scope begin gen_not_gates[11] $end
 $upscope $end
-$scope begin genblk1[12] $end
+$scope begin gen_not_gates[12] $end
 $upscope $end
-$scope begin genblk1[13] $end
+$scope begin gen_not_gates[13] $end
 $upscope $end
-$scope begin genblk1[14] $end
+$scope begin gen_not_gates[14] $end
 $upscope $end
-$scope begin genblk1[15] $end
+$scope begin gen_not_gates[15] $end
 $upscope $end
-$scope begin genblk1[16] $end
+$scope begin gen_not_gates[16] $end
 $upscope $end
-$scope begin genblk1[17] $end
+$scope begin gen_not_gates[17] $end
 $upscope $end
-$scope begin genblk1[18] $end
+$scope begin gen_not_gates[18] $end
 $upscope $end
-$scope begin genblk1[19] $end
+$scope begin gen_not_gates[19] $end
 $upscope $end
-$scope begin genblk1[20] $end
+$scope begin gen_not_gates[20] $end
 $upscope $end
-$scope begin genblk1[21] $end
+$scope begin gen_not_gates[21] $end
 $upscope $end
-$scope begin genblk1[22] $end
+$scope begin gen_not_gates[22] $end
 $upscope $end
-$scope begin genblk1[23] $end
+$scope begin gen_not_gates[23] $end
 $upscope $end
-$scope begin genblk1[24] $end
+$scope begin gen_not_gates[24] $end
 $upscope $end
-$scope begin genblk1[25] $end
+$scope begin gen_not_gates[25] $end
 $upscope $end
-$scope begin genblk1[26] $end
+$scope begin gen_not_gates[26] $end
 $upscope $end
-$scope begin genblk1[27] $end
+$scope begin gen_not_gates[27] $end
 $upscope $end
-$scope begin genblk1[28] $end
+$scope begin gen_not_gates[28] $end
 $upscope $end
-$scope begin genblk1[29] $end
+$scope begin gen_not_gates[29] $end
 $upscope $end
-$scope begin genblk1[30] $end
+$scope begin gen_not_gates[30] $end
 $upscope $end
-$scope begin genblk1[31] $end
+$scope begin gen_not_gates[31] $end
 $upscope $end
-$scope begin genblk1[32] $end
+$scope begin gen_not_gates[32] $end
 $upscope $end
-$scope begin genblk1[33] $end
+$scope begin gen_not_gates[33] $end
 $upscope $end
-$scope begin genblk1[34] $end
+$scope begin gen_not_gates[34] $end
 $upscope $end
-$scope begin genblk1[35] $end
+$scope begin gen_not_gates[35] $end
 $upscope $end
-$scope begin genblk1[36] $end
+$scope begin gen_not_gates[36] $end
 $upscope $end
-$scope begin genblk1[37] $end
+$scope begin gen_not_gates[37] $end
 $upscope $end
-$scope begin genblk1[38] $end
+$scope begin gen_not_gates[38] $end
 $upscope $end
-$scope begin genblk1[39] $end
+$scope begin gen_not_gates[39] $end
 $upscope $end
-$scope begin genblk1[40] $end
+$scope begin gen_not_gates[40] $end
 $upscope $end
-$scope begin genblk1[41] $end
+$scope begin gen_not_gates[41] $end
 $upscope $end
-$scope begin genblk1[42] $end
+$scope begin gen_not_gates[42] $end
 $upscope $end
-$scope begin genblk1[43] $end
+$scope begin gen_not_gates[43] $end
 $upscope $end
-$scope begin genblk1[44] $end
+$scope begin gen_not_gates[44] $end
 $upscope $end
-$scope begin genblk1[45] $end
+$scope begin gen_not_gates[45] $end
 $upscope $end
-$scope begin genblk1[46] $end
+$scope begin gen_not_gates[46] $end
 $upscope $end
-$scope begin genblk1[47] $end
+$scope begin gen_not_gates[47] $end
 $upscope $end
-$scope begin genblk1[48] $end
+$scope begin gen_not_gates[48] $end
 $upscope $end
-$scope begin genblk1[49] $end
+$scope begin gen_not_gates[49] $end
 $upscope $end
-$scope begin genblk1[50] $end
+$scope begin gen_not_gates[50] $end
 $upscope $end
-$scope begin genblk1[51] $end
+$scope begin gen_not_gates[51] $end
 $upscope $end
-$scope begin genblk1[52] $end
+$scope begin gen_not_gates[52] $end
 $upscope $end
-$scope begin genblk1[53] $end
+$scope begin gen_not_gates[53] $end
 $upscope $end
-$scope begin genblk1[54] $end
+$scope begin gen_not_gates[54] $end
 $upscope $end
-$scope begin genblk1[55] $end
+$scope begin gen_not_gates[55] $end
 $upscope $end
-$scope begin genblk1[56] $end
+$scope begin gen_not_gates[56] $end
 $upscope $end
-$scope begin genblk1[57] $end
+$scope begin gen_not_gates[57] $end
 $upscope $end
-$scope begin genblk1[58] $end
+$scope begin gen_not_gates[58] $end
 $upscope $end
-$scope begin genblk1[59] $end
+$scope begin gen_not_gates[59] $end
 $upscope $end
-$scope begin genblk1[60] $end
+$scope begin gen_not_gates[60] $end
 $upscope $end
-$scope begin genblk1[61] $end
+$scope begin gen_not_gates[61] $end
 $upscope $end
-$scope begin genblk1[62] $end
+$scope begin gen_not_gates[62] $end
 $upscope $end
-$scope begin genblk1[63] $end
+$scope begin gen_not_gates[63] $end
 $upscope $end
-$scope begin genblk1[64] $end
+$scope begin gen_not_gates[64] $end
 $upscope $end
-$scope begin genblk1[65] $end
+$scope begin gen_not_gates[65] $end
 $upscope $end
-$scope begin genblk1[66] $end
+$scope begin gen_not_gates[66] $end
 $upscope $end
-$scope begin genblk1[67] $end
+$scope begin gen_not_gates[67] $end
 $upscope $end
-$scope begin genblk1[68] $end
+$scope begin gen_not_gates[68] $end
 $upscope $end
-$scope begin genblk1[69] $end
+$scope begin gen_not_gates[69] $end
 $upscope $end
-$scope begin genblk1[70] $end
+$scope begin gen_not_gates[70] $end
 $upscope $end
-$scope begin genblk1[71] $end
+$scope begin gen_not_gates[71] $end
 $upscope $end
-$scope begin genblk1[72] $end
+$scope begin gen_not_gates[72] $end
 $upscope $end
-$scope begin genblk1[73] $end
+$scope begin gen_not_gates[73] $end
 $upscope $end
-$scope begin genblk1[74] $end
+$scope begin gen_not_gates[74] $end
 $upscope $end
-$scope begin genblk1[75] $end
+$scope begin gen_not_gates[75] $end
 $upscope $end
-$scope begin genblk1[76] $end
+$scope begin gen_not_gates[76] $end
 $upscope $end
-$scope begin genblk1[77] $end
+$scope begin gen_not_gates[77] $end
 $upscope $end
-$scope begin genblk1[78] $end
+$scope begin gen_not_gates[78] $end
 $upscope $end
-$scope begin genblk1[79] $end
+$scope begin gen_not_gates[79] $end
 $upscope $end
-$scope begin genblk1[80] $end
+$scope begin gen_not_gates[80] $end
 $upscope $end
-$scope begin genblk1[81] $end
+$scope begin gen_not_gates[81] $end
 $upscope $end
-$scope begin genblk1[82] $end
+$scope begin gen_not_gates[82] $end
 $upscope $end
-$scope begin genblk1[83] $end
+$scope begin gen_not_gates[83] $end
 $upscope $end
-$scope begin genblk1[84] $end
+$scope begin gen_not_gates[84] $end
 $upscope $end
-$scope begin genblk1[85] $end
+$scope begin gen_not_gates[85] $end
 $upscope $end
-$scope begin genblk1[86] $end
+$scope begin gen_not_gates[86] $end
 $upscope $end
-$scope begin genblk1[87] $end
+$scope begin gen_not_gates[87] $end
 $upscope $end
-$scope begin genblk1[88] $end
+$scope begin gen_not_gates[88] $end
 $upscope $end
-$scope begin genblk1[89] $end
+$scope begin gen_not_gates[89] $end
 $upscope $end
-$scope begin genblk1[90] $end
+$scope begin gen_not_gates[90] $end
 $upscope $end
-$scope begin genblk1[91] $end
+$scope begin gen_not_gates[91] $end
 $upscope $end
-$scope begin genblk1[92] $end
+$scope begin gen_not_gates[92] $end
 $upscope $end
-$scope begin genblk1[93] $end
+$scope begin gen_not_gates[93] $end
 $upscope $end
-$scope begin genblk1[94] $end
+$scope begin gen_not_gates[94] $end
 $upscope $end
-$scope begin genblk1[95] $end
+$scope begin gen_not_gates[95] $end
 $upscope $end
-$scope begin genblk1[96] $end
+$scope begin gen_not_gates[96] $end
 $upscope $end
-$scope begin genblk1[97] $end
+$scope begin gen_not_gates[97] $end
 $upscope $end
-$scope begin genblk1[98] $end
+$scope begin gen_not_gates[98] $end
 $upscope $end
-$scope begin genblk1[99] $end
+$scope begin gen_not_gates[99] $end
 $upscope $end
-$scope begin genblk1[100] $end
+$scope begin gen_not_gates[100] $end
 $upscope $end
-$scope begin genblk1[101] $end
+$scope begin gen_not_gates[101] $end
 $upscope $end
-$scope begin genblk1[102] $end
+$scope begin gen_not_gates[102] $end
 $upscope $end
-$scope begin genblk1[103] $end
+$scope begin gen_not_gates[103] $end
 $upscope $end
-$scope begin genblk1[104] $end
+$scope begin gen_not_gates[104] $end
 $upscope $end
-$scope begin genblk1[105] $end
+$scope begin gen_not_gates[105] $end
 $upscope $end
-$scope begin genblk1[106] $end
+$scope begin gen_not_gates[106] $end
 $upscope $end
-$scope begin genblk1[107] $end
+$scope begin gen_not_gates[107] $end
 $upscope $end
-$scope begin genblk1[108] $end
+$scope begin gen_not_gates[108] $end
 $upscope $end
-$scope begin genblk1[109] $end
+$scope begin gen_not_gates[109] $end
 $upscope $end
-$scope begin genblk1[110] $end
+$scope begin gen_not_gates[110] $end
 $upscope $end
-$scope begin genblk1[111] $end
+$scope begin gen_not_gates[111] $end
 $upscope $end
-$scope begin genblk1[112] $end
+$scope begin gen_not_gates[112] $end
 $upscope $end
-$scope begin genblk1[113] $end
+$scope begin gen_not_gates[113] $end
 $upscope $end
-$scope begin genblk1[114] $end
+$scope begin gen_not_gates[114] $end
 $upscope $end
-$scope begin genblk1[115] $end
+$scope begin gen_not_gates[115] $end
 $upscope $end
-$scope begin genblk1[116] $end
+$scope begin gen_not_gates[116] $end
 $upscope $end
-$scope begin genblk1[117] $end
+$scope begin gen_not_gates[117] $end
 $upscope $end
-$scope begin genblk1[118] $end
+$scope begin gen_not_gates[118] $end
 $upscope $end
-$scope begin genblk1[119] $end
+$scope begin gen_not_gates[119] $end
 $upscope $end
-$scope begin genblk1[120] $end
+$scope begin gen_not_gates[120] $end
 $upscope $end
-$scope begin genblk1[121] $end
+$scope begin gen_not_gates[121] $end
 $upscope $end
-$scope begin genblk1[122] $end
+$scope begin gen_not_gates[122] $end
 $upscope $end
-$scope begin genblk1[123] $end
+$scope begin gen_not_gates[123] $end
 $upscope $end
-$scope begin genblk1[124] $end
+$scope begin gen_not_gates[124] $end
 $upscope $end
-$scope begin genblk1[125] $end
+$scope begin gen_not_gates[125] $end
 $upscope $end
-$scope begin genblk1[126] $end
+$scope begin gen_not_gates[126] $end
 $upscope $end
-$scope begin genblk1[127] $end
+$scope begin gen_not_gates[127] $end
 $upscope $end
-$scope begin genblk1[128] $end
+$scope begin gen_not_gates[128] $end
 $upscope $end
-$scope begin genblk1[129] $end
+$scope begin gen_not_gates[129] $end
 $upscope $end
-$scope begin genblk1[130] $end
+$scope begin gen_not_gates[130] $end
 $upscope $end
-$scope begin genblk1[131] $end
+$scope begin gen_not_gates[131] $end
 $upscope $end
-$scope begin genblk1[132] $end
+$scope begin gen_not_gates[132] $end
 $upscope $end
-$scope begin genblk1[133] $end
+$scope begin gen_not_gates[133] $end
 $upscope $end
-$scope begin genblk1[134] $end
+$scope begin gen_not_gates[134] $end
 $upscope $end
-$scope begin genblk1[135] $end
+$scope begin gen_not_gates[135] $end
 $upscope $end
-$scope begin genblk1[136] $end
+$scope begin gen_not_gates[136] $end
 $upscope $end
 $upscope $end
 $upscope $end

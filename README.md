@@ -110,7 +110,7 @@ $ vvp testbench
 ```
 $ pwd
 <4-bit-cpu>/datapath
-$ gtkwave datapath/test.vcd
+$ gtkwave test.vcd
 ```
 
 ![waveform](waveform.png "waveform")
