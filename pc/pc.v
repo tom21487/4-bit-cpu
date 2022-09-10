@@ -4,7 +4,7 @@ module pc(set_pc, alu_eq, clk, INS, PC_CURR);
    input set_pc;
    input alu_eq;
    input clk;
-   input [10:0] INS;
+   input [15:0] INS;
    output [3:0] PC_CURR;
    wire w1;
    not #(1) not_1(w1, INS[9]);

@@ -1,6 +1,6 @@
 // Critical path delay = 7ns
 module ins_dec(INS, sel_data, write_en, alu_op, SEL_A, SEL_B, SEL_W, IMM, JMP);
-   input [10:0] INS;
+   input [15:0] INS;
    output      sel_data;
    output      write_en;
    output      alu_op;

@@ -1,4 +1,6 @@
-// Critical path delay = 51 ns
+// Critical path delay:
+// Everything: 51 ns
+// Equality: 8 ns
 module alu(A, B, sel, RES, eq, ovf);
    input [3:0] A;
    input [3:0] B;

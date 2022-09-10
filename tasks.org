@@ -23,20 +23,20 @@
 - [X] Update ins_mem
 - [X] Update assembler (including "push" -> "move")
 - [X] Update ins_dec
-*** TODO Branch instruction
+*** DONE Branch instruction
 - [X] Update pc
 - [X] Update oscillator period
 - [X] Add alu_eq and alu_ovf as datapath outputs
 - [X] Design (not implement) branch.tass to test branching in datapath
 ** TODO Update to 16-bit instructions for consistency
-- [ ] Update instruction specs (keep existing opcode positions)
-- [ ] Change mux_16_1_11b -> mux_16_1_16b
-- [ ] Update ins_dec
-- [ ] Update pc
-- [ ] Update ins_mem_header
-- [ ] Update assembler
-- [ ] Update datapath
-- [ ] Implement and test branch.tass (add/nand switching)
-- [ ] Test program.tass
+- [X] Update instruction specs (keep existing opcode positions)
+- [X] Change mux_16_1_11b -> mux_16_1_16b
+- [X] Update ins_dec
+- [X] Update pc
+- [X] Update ins_mem_header
+- [X] Update assembler
+- [X] Update datapath
+- [X] Test program.tass
+- [ ] Implement and test branch.tass (add/nand switching, see Noteshelf)
 - [ ] Another .tass test which includes: branch backwards, branch not taken, negative numbers
-** TODO README.md, with high-level picture of datapath inputs and outputs
+* TODO README.md, with high-level picture of datapath inputs and outputs

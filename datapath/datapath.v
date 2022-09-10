@@ -1,16 +1,18 @@
 // clock period = 2*76 ns = 152 ns
-module datapath(clk, set_pc, R3, R2, R1, R0);
+module datapath(clk, set_pc, R3, R2, R1, R0, alu_eq, alu_ovf);
    input clk;
    input set_pc;
    output [3:0] R3;
    output [3:0] R2;
    output [3:0] R1;
    output [3:0] R0;
+   output alu_eq;
+   output alu_ovf;
 
    // instruction fetch
    wire [3:0] PC_CURR;
-   pc pc_0(.set_pc(set_pc), .alu_eq(), .clk(clk), .PC_CURR(PC_CURR));
-   wire [8:0]   RES_INS;
+   wire [15:0]   RES_INS;
+   pc pc_0(.set_pc(set_pc), .alu_eq(alu_eq), .clk(clk), .INS(RES_INS), .PC_CURR(PC_CURR));
    ins_mem ins_mem_0(.PC(PC_CURR), .RES_INS(RES_INS));
 
    // instruction decode
@@ -37,5 +39,5 @@ module datapath(clk, set_pc, R3, R2, R1, R0);
                        .OUT_B(OUT_B), .Q3(R3), .Q2(R2), .Q1(R1), .Q0(R0));
 
    // ALU
-   alu alu_0(.A(OUT_A), .B(OUT_B), .sel(alu_op), .RES(ALU_RES));
+   alu alu_0(.A(OUT_A), .B(OUT_B), .sel(alu_op), .RES(ALU_RES), .eq(alu_eq), .ovf(alu_ovf));
 endmodule;

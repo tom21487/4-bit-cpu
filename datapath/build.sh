@@ -8,7 +8,7 @@ iverilog -o testbench \
 ../mux_2_1_4b/mux_2_1_4b.v \
 ../mux_8_1_1b/mux_8_1_1b.v \
 ../mux_16_1_1b/mux_16_1_1b.v \
-../mux_16_1_9b/mux_16_1_9b.v \
+../mux_16_1_16b/mux_16_1_16b.v \
 ../decoder_2_4_1b/decoder_2_4_1b.v \
 ../fa/fa.v \
 ../rca/rca.v \
