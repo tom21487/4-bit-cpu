@@ -7,6 +7,7 @@ A 4-bit CPU core using only wires and logic gates. Implemented using Verilog.
 - Number of instructions: 16
 - Instruction memory size: 256 bits
 - Clock period: 280 ns
+- Single cycle
 
 ## Gate delays
 - AND: 3 ns
