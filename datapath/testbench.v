@@ -31,7 +31,7 @@ module testbench;
       /*clk=0*/ #140;
       /*clk=1*/ #140;
 
-      // Read the first N instructions
+      // Wait for N reads
       for (i = 0; i < N; i = i+1) begin
 	 /*clk=0*/
          #54; // wait for alu_eq to resolve before releasing pc

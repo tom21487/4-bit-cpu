@@ -1,0 +1,112 @@
+# instruction 0
+# current register state
+# reg3: 4'bxxxx
+# reg2: 4'bxxxx
+# reg1: 4'bxxxx
+# reg0: 4'bxxxx
+move reg0 0000
+# instruction 1
+# current register state
+# reg3: 4'bxxxx
+# reg2: 4'bxxxx
+# reg1: 4'bxxxx
+# reg0: 4'b0000
+move reg1 0001 # instruction 1
+# instruction 2
+# current register state
+# reg3: 4'bxxxx
+# reg2: 4'bxxxx
+# reg1: 4'b0001
+# reg0: 4'b0000
+move reg2 0010
+# instruction 3
+# current register state
+# reg3: 4'bxxxx
+# reg2: 4'b0010
+# reg1: 4'b0001
+# reg0: 4'b0000
+move reg3 0011
+# instruction 4
+# current register state
+# reg3: 4'b0011
+# reg2: 4'b0010
+# reg1: 4'b0001
+# reg0: 4'b0000
+nand reg1 reg1 reg2
+# instruction 5
+# current register state
+# reg3: 4'b0011
+# reg2: 4'b0010
+# reg1: 4'b1111
+# reg0: 4'b0000
+branch 0011 reg1 reg3
+# instruction 6
+# current register state
+# reg3: 4'b0011
+# reg2: 4'b0010
+# reg1: 4'b1111
+# reg0: 4'b0000
+move r0 0010
+# instruction 7
+# current register state
+# reg3: 4'b0011
+# reg2: 4'b0010
+# reg1: 4'b1111
+# reg0: 4'b0010
+branch 0010 reg0 reg0
+# instruction 8
+# current register state
+# reg3: instruction skipped
+# reg2: instruction skipped
+# reg1: instruction skipped
+# reg0: instruction skipped
+move reg0 0001
+# instruction 9
+# current register state
+# reg3: 4'b0011
+# reg2: 4'b0010
+# reg1: 4'b1111
+# reg0: 4'b0010
+noop
+# instruction 10
+# current register state
+# reg3: 4'b0011
+# reg2: 4'b0010
+# reg1: 4'b1111
+# reg0: 4'b0010
+noop
+# instruction 11
+# current register state
+# reg3: 4'b0011
+# reg2: 4'b0010
+# reg1: 4'b1111
+# reg0: 4'b0010
+noop
+# instruction 12
+# current register state
+# reg3: 4'b0011
+# reg2: 4'b0010
+# reg1: 4'b1111
+# reg0: 4'b0010
+noop
+# instruction 13
+# current register state
+# reg3: 4'b0011
+# reg2: 4'b0010
+# reg1: 4'b1111
+# reg0: 4'b0010
+noop
+# instruction 14
+# current register state
+# reg3: 4'b0011
+# reg2: 4'b0010
+# reg1: 4'b1111
+# reg0: 4'b0010
+noop
+# instruction 15
+# current register state
+# reg3: 4'b0011
+# reg2: 4'b0010
+# reg1: 4'b1111
+# reg0: 4'b0010
+noop
