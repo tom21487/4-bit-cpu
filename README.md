@@ -76,7 +76,7 @@ For all instructions' machine code
 
 
 ## Schematic
-High-level schematic of datapath, generated using [Intel Quartus Prime](https://www.intel.com/content/www/us/en/products/details/fpga/development-tools/quartus-prime.html)
+High-level schematic of datapath, generated using [Intel Quartus Prime](https://www.intel.com/content/www/us/en/products/details/fpga/development-tools/quartus-prime.html).
 
 ![schematic](schematic.png "schematic")
 
