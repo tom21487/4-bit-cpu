@@ -114,3 +114,6 @@ $ gtkwave test.vcd
 ```
 
 ![waveform](waveform.png "waveform")
+
+## Design files
+Designs for circuits can be viewed in [designs.pdf](designs.pdf)
